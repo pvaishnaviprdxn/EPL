@@ -112,7 +112,7 @@ window.onload = (function(){
         }
     }
 
-});
+})
 
 
 
