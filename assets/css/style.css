@@ -121,7 +121,6 @@ li {
 /*Login page style*/
 .login-page {
     width: 100%;
-    height: auto;
     background-image: url(../images/login-back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,6 +161,7 @@ h1 a img { width: 200px; }
 }
 
 .modal {
+    
     width: 26%; 
     padding:0 50px;
     position: fixed;
@@ -198,10 +198,12 @@ h1 a img { width: 200px; }
 .login-form { padding: 40px 25px; }
 
 h2 { 
-    font-size: 20px;
+    text-transform: capitalize;
     text-align: center;
-    font-family: serif;
     padding-bottom: 20px;
+    font-size: 18px;
+    font-family: serif;
+    font-weight: bold;  
 }
 .up { text-transform: uppercase; }
 .cap {text-transform: capitalize; }
@@ -238,7 +240,9 @@ input[type="password"] {
 }
 
 .email-error1,
-.email-error2{
+.email-error2,
+.pass-error1,
+.pass-error2 {
     opacity: 0;;
     font-size: 13px;
     color: #ff1e1e;
@@ -247,7 +251,8 @@ input[type="password"] {
     font-family: monospace;
 }
 
-.email-error1 { position: absolute; }
+.email-error1,
+.pass-error1 { position: absolute; }
 
 .submit-form { 
     text-align: center;
@@ -257,13 +262,13 @@ input[type="password"] {
 .submit { 
     text-transform: uppercase;
     padding: 6px 30px;
-    border: 3px solid rgb(0, 217, 255);;
+    border: 3px solid rgb(44, 199, 226);
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    background-color: rgb(0, 217, 255);
+    background-color: rgb(44, 199, 226);
     color: white;
     font-weight: bold;
     font-family: serif;
@@ -282,6 +287,11 @@ input[type="password"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus { outline: transparent; }
+
+/*js class*/
+.error { opacity: 1; }
+.btn-disp { display: block; }
+.btn-nodisp { display: none; }
 /*=================================
   main styling ends here
 =================================*/
@@ -302,8 +312,20 @@ input[type="password"]:focus { outline: transparent; }
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
+@media only screen and (max-width: 1024px) {
+    /*login page media-query*/
+    h1 a img { width: 160px; }
+    .login-btn { padding: 4px 15px; }
+    .modal { left: 330px; }
+    h2 { font-size: 15px; }
+    label { font-size: 12px; }
+    .email,
+    .pass { font-size: 12px; }
 
 
 }  
+@media only screen and (max-width: 995px) {
+    /*login page media-query*/
+    h1 a img { width: 130px; }
+    .login-btn { padding: 3px 13px; }
+}
