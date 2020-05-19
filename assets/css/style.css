@@ -161,7 +161,7 @@ h1 a img { width: 200px; }
 }
 
 .modal {
-    
+    display: none;
     width: 26%; 
     padding:0 50px;
     position: fixed;
