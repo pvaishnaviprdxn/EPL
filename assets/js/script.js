@@ -12,12 +12,24 @@ window.onload = (function(){
     var main=this.document.querySelector("main");
     
     //index-page/login-page functionality starts here
-    var loginPage = document.getElementById("login-page");
-    var login = document.querySelector("login-btn");
+    var loginPage = document.querySelector(".container");
+    var login = document.querySelector(".login-btn");
     var modal = document.getElementById("form-modal");
     var closeMod = document.getElementById("close");
 
-    
+    if(loginPage.classList.contains("log-page")){
+        function openModal() {
+            modal.classList.add("btn-disp");
+        }
+        function closeModal() {
+            closeMod.classList.add("nobtn-disp");
+        }
+
+        login.addEventListener("click",openModal,false);
+        closeMod.addEventListener("click",closeModal,false);
+        
+        
+    }
 
 })
 
