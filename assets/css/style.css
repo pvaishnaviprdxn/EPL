@@ -15,18 +15,18 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
 figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+    display: block;
 }
 
 /* Force scrollbar */
@@ -41,29 +41,29 @@ label,
 input[type='button'],
 input[type='submit'],
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 strong {
-  font-weight: bold;
-  font-family: inherit;
-  font-size: inherit;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 em { font-style: italic; }
 
 img {
-  width: 100%;
-  border: 0;
-  vertical-align: middle;
+    width: 100%;
+    border: 0;
+    vertical-align: middle;
 }
 
 sub,
 sup {
-  vertical-align: baseline;
-  position: relative;
-  font-size: 55%;
-  line-height: 0;
+    vertical-align: baseline;
+    position: relative;
+    font-size: 55%;
+    line-height: 0;
 }
 
 sup { top: -.7em; }
@@ -74,8 +74,8 @@ sub { bottom: -.25em; }
 
 .cf:before,
 .cf:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
 }
 
 .cf:after { clear: both; }
@@ -83,30 +83,29 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
-  font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 a { 
-  display: inline-block;
-  text-decoration: none; 
+    display: inline-block;
+    text-decoration: none; 
 }
 
 li {
-  display: inline-block;
-  list-style-type: none;
+    display: inline-block;
+    list-style-type: none;
 }
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
+    max-width: 1360px;
+    width: 86%; 
+    margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
-
 
 
 
@@ -119,7 +118,21 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/*Login page style*/
+.login-page {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/login-back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+h1 { 
+    text-align: center;
+    display: block;
+}
+
+h1 a img { width: 200px; }
 
 
 
