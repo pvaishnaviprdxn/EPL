@@ -243,7 +243,7 @@ input[type="password"] {
 .email-error2,
 .pass-error1,
 .pass-error2 {
-    opacity: 0;;
+    opacity: 0;
     font-size: 13px;
     color: #ff1e1e;
     font-weight: bold;
@@ -324,8 +324,61 @@ input[type="password"]:focus { outline: transparent; }
 
 
 }  
+
 @media only screen and (max-width: 995px) {
     /*login page media-query*/
-    h1 a img { width: 130px; }
+    h1 a img { width: 140px; }
     .login-btn { padding: 3px 13px; }
+}
+
+@media only screen and (max-width: 768px) {
+    /*login page media-query*/
+    h1 a img { width: 130px; }
+    h2 { font-size: 10.6px; }
+    .modal { left: 240px; }
+    label { font-size: 10px; }
+
+    .email,
+    .pass { font-size: 10px; }
+
+    .email-error1,
+    .email-error2,
+    .pass-error1 {
+        font-weight: lighter; 
+        font-size:9px;
+    }
+
+    .pass-error2 { font-size: 7.56px; }
+}
+
+@media only screen and (max-width: 540px) {
+    /*login page media-query*/
+    .modal { 
+        left: 160px;
+        top: 10%;
+    }
+
+    .login-form { padding: 20px 0; }
+
+    .submit { 
+        padding:2px 10px;
+        font-size: 12px; 
+    }
+
+    .close-mod:before {
+        float: right;
+        top: 0;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    /*login page media-query*/
+    .login-page { background-size: 320px 418px; }
+
+    .modal { 
+        width: 175px;
+        top: 5%;
+        left: 29px;
+        margin: 0 auto;
+    }
 }
