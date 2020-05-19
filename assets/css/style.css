@@ -128,12 +128,38 @@ li {
 }
 
 h1 { 
+    padding-top: 100px;
     text-align: center;
-    display: block;
 }
 
 h1 a img { width: 200px; }
+.login { text-align: center; }
 
+.login-btn {
+    text-transform: capitalize;
+    padding: 6px 27px;
+    border: 2px solid rgb(255, 254, 254);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    background: rgb(255, 254, 254);;
+    color: rgb(27, 26, 26);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: transparent;
+    border: 2px solid;
+    color: rgb(255, 254, 254);
+    transition: .4 ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
 
 
 
