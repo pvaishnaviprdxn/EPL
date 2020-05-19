@@ -17,18 +17,73 @@ window.onload = (function(){
     var modal = document.getElementById("form-modal");
     var closeMod = document.getElementById("close");
 
-    if(loginPage.classList.contains("log-page")){
+    if(loginPage.classList.contains("log-page")) {
+
+        //function to open form modal
         function openModal() {
+            login.classList.add("btn-nodisp");
             modal.classList.add("btn-disp");
         }
+        //function to close form modal
         function closeModal() {
-            closeMod.classList.add("nobtn-disp");
+            modal.classList.remove("btn-disp");
+            login.classList.remove("btn-nodisp");
         }
-
         login.addEventListener("click",openModal,false);
         closeMod.addEventListener("click",closeModal,false);
         
-        
+        //form validation
+        var lemail=document.getElementById("email-id");
+        var lpassword=document.getElementById("user-pass");
+        var validEmail=false;
+        var validPass=false;
+
+        lemail.addEventListener("blur",function(){
+            var email=lemail.value;
+            var emailp=/^([0-9a-zA-Z\_\.\-]+)@([0-9a-zA-Z\_\.\-]+)\.([a-zA-Z]+)$/;
+            var emailEr1 = document.querySelector(".email-error1");
+            var emailEr2 = document.querySelector(".email-error2");
+            if(email == ""){
+                emailEr1.classList.add("error");
+                validEmail=false;
+            }
+            else if(!email.match(emailp)){
+                emailEr2.classList.add("error");
+                validEmail=false;
+            }
+            else{
+                emailEr1.classList.remove("error");
+                emailEr2.classList.remove("error");
+                validEmail=true;
+            }
+        },false);
+
+        lpassword.addEventListener("blur",function(){
+            var password=lpassword.value;
+            var passwordp=/((?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-zA-Z])){4,15}/;
+            var passEr1 = document.querySelector(".pass-error1");
+            var passEr2 = document.querySelector(".pass-error2");
+            if(password == ""){
+                passEr1.classList.add("error");
+                validPass=false;
+            }
+            else if(!password.match(passwordp)){
+                passEr2.classList.add("error");
+                validPass=false;
+            }
+            else{
+                passEr1.classList.remove("error");
+                passEr2.classList.remove("error");
+                validPass="true";
+            }
+        },false);
+
+        var logbtn = document.querySelector(".go");
+        logbtn.addEventListener("click",loggedIn,false);
+
+        function loggedIn() {
+            
+        }
     }
 
 })
