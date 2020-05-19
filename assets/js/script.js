@@ -78,11 +78,37 @@ window.onload = (function(){
             }
         },false);
 
-        var logbtn = document.querySelector(".go");
-        logbtn.addEventListener("click",loggedIn,false);
+        var logbtn = document.getElementById("save-login");
+        logbtn.addEventListener("click",loggedIn);
 
-        function loggedIn() {
-            
+        //login credentials to be stored in localstorage
+        var creds = [
+            { uemail:"vaishnavi@gmail.com", upassword:"vaishnavi@62" },
+            { uemail:"george@gmail.com", upassword:"george@73 " },
+            { uemail:"prdxn@gmail.com", upassword:"prdxn@84"}
+        ];
+        //function to login
+        function loggedIn(e) {
+            e.preventDefault();
+            var i;
+            for(i=0; i < creds.length; i++){
+                if(lemail.value === creds[i].uemail && lpassword.value === creds[i].upassword){
+                    dataStorage();
+                    resetForm();
+                }
+            }
+        }
+
+        //storing data in localStorage
+        function dataStorage(){
+            var storing = JSON.stringify(creds);
+            var userAccess = "users" + localStorage.length;
+            localStorage.setItem(userAccess,storing);
+            window.location.assign("home-page.html");
+        }
+        //form reset
+        function resetForm() {
+            document.querySelector(".login-form").reset();
         }
     }
 
