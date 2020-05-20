@@ -4,7 +4,7 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
-        <title>Client</title>
+        <title>Club List | EPL Football</title>
         <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
         <!-- <meta name="description" lang="en" content=""> -->
         <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
@@ -35,18 +35,102 @@
         <div class="container">
             <!--header section start-->
             <header>
-                
+                <!--wrapper start-->
+                <div class="wrapper">
+                    <!--logo structure start-->
+                    <h1>
+                        <a href="#FIXME" title="English Premier League Football" rel="nofollow">
+                            <img src="assets/images/epl-logo.png" alt="English Premier League Football">
+                        </a>
+                    </h1>
+                    <!--logo structure end-->
+                    <!--nav structure start-->
+                    <nav>
+                        <a href="#FIXME" class="hamburger" aria-hidden="true" title="Menu" rel="nofollow">hamburder</a>
+                        <ul class="menu">
+                            <li>
+                                <a href="#FIXME" rel="nofollow" class="home" title="Home">home</a>
+                            </li><li>
+                                <a href="#FIXME" rel="nofollow" class="club-list active" title="Club list">club list</a>
+                            </li><li>
+                                <a href="#FIXME" rel="nofollow" class="match-det" title="Match details">match details</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--nav structure end-->
+                    <div class="logout-btn">
+                        <a href="#FIXME" title="Logout" rel="nofollow" class="logout">logout</a>
+                    </div>
+                </div>
+                <!--wrapper end-->
             </header>
             <!--header section end-->
             <!--main section start-->
-            <main>
+            <main class="club-list">
+                <!--dropdown structure-->
+                <section class="list-dropdown">
+                    <!--wrapper start-->
+                    <div class="wrapper">
+                        <form class="clubs">
+                            <input type="text" name="epl-clubs" list="list-of-clubs" placeholder="Seach for the clubs of the league">
+                            <datalist id="list-of-clubs"></datalist>
+                        </form>
+                    </div>
+                    <!--wrapper end-->
+                </section>
+                <!--dropdown structure end-->
+
+                <!--display section start-->
+                <section class="club-results">
+                    <!--wrapper start-->
+                    <div class="wrapper">
+                        <!--club details structure start-->
+                        <ul class="result"></ul>
+                        <div class="load-more">
+                            <a href="#FIXME" rel="nofollow" title="Show more" class="show" id="show-more">
+                                <span class="up">S</span>how more</a>
+                            </a>
+                        </div>
+                        <!--club details structure end-->
+                    </div>
+                    <!--wrapper end-->
+                </section>
+                <!--display section end-->
 
             </main>
             <!--main section end-->
 
             <!--footer section start-->
             <footer>      
-
+                <div class="wrapper">
+                    <!--logo start here-->  
+                    <div class="logo">
+                        <h5>
+                            <a href="#FIXME" title="English Premier League Football" rel="nofollow">
+                                <img src="assets/images/epl-logo.png" alt="English Premier League Football">
+                            </a>       
+                        </h5>
+                    </div>
+                    <!--logo end here--> 
+                    <!--nav start-->
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="#FIXME" rel="nofollow" class="home" title="Home">home</a>
+                        </li><li>
+                            <a href="#FIXME" rel="nofollow" class="club" title="Club list">club list</a>
+                        </li><li>
+                            <a href="#FIXME" rel="nofollow" class="match" title="Match details">match details</a>
+                        </li>
+                    </ul>
+                    <!--nav end-->
+                </div>
+                <!--copyright start-->
+                <div class="copyright">
+                    <div class="wrapper">
+                        <span>copyright 2020 &#169; <span class="up">epl</span> football. all rights reserved</span>
+                    </div>
+                </div>
+                <!--copyright end-->
             </footer>
             <!--footer section end-->
 
