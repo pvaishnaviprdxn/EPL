@@ -106,10 +106,72 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+header { background-color: #423a3afc; }
 
+header h1 {
+    text-align: left;
+    padding: 0;
+    display: inline-block;
+    margin-right: 25px;
 
+}
 
+header h1 a img { width: 150px; }
+nav { display: inline-block; }
+.hamburger { display: none; }
 
+.menu li a {
+    text-transform: capitalize;
+    padding: 12px 0;
+    margin-right: 36px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu li a.home.active,
+.menu li a:hover {
+    border-bottom: 2px solid;
+    -webkit-border-bottom: 2px solid;
+    -moz-border-bottom: 2px solid;
+    -ms-border-bottom: 2px solid;
+    -o-border-bottom: 2px solid;
+}
+
+.logout-btn { 
+    display: inline-block; 
+    position: relative;
+    left: 47.15%;
+}
+
+.logout {
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border: 2px solid;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.logout:hover {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    background-color:white;
+    color: black;
+    border-color: rgb(255, 251, 251);
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
 
 /*=================================
   Header styling ends here
@@ -299,13 +361,82 @@ input[type="password"]:focus { outline: transparent; }
 /*=================================
   footer styling starts here
 =================================*/ 
+footer { background-color: #423a3afc; }
 
+.logo h5,
+.footer-nav,
+.social-links { text-align: center; }
 
+.logo h5 a img { width: 120px; }
+.footer-nav { margin: 10px 0; }
+.footer-nav li { margin: 0 15px; }
 
+.footer-nav li a {
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
 
+.footer-nav li a:hover { text-decoration: underline; }
+.social-links { padding: 10px 0; }
 
+.twitter,
+.facebook,
+.instagram,
+.snapchat {
+    text-indent: -9999px;
+    display: inline-block;
+    position: relative;
+}
 
+.twitter:before { content: "\f099"; }
+.facebook:before { content: "\f09a"; }
+.instagram:before { content: "\f16d"; }
+.snapchat:before {
+     content: "\f2ac";
+     border: 1px solid;
+}
 
+.twitter:hover:before { color:rgb(29,161,242); }
+.facebook:hover:before { color:rgb(16, 134, 245); }
+.instagram:hover:before { color:rgb(231, 42, 152); }
+.snapchat:hover:before { color:rgb(255, 230, 5); }
+
+.twitter:before,
+.facebook:before,
+.instagram:before,
+.snapchat:before {
+    text-align: center;
+    text-indent: 0;
+    width: 15px;
+    padding: 5px 6px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-right: 16px;
+    float: right;
+    background: #ffffff;
+    color: rgb(61, 57, 57);
+    font-family: "Fontawesome";
+    font-size: 16px;
+    border: 3px solid #6967676b;
+    border-color: #a7a0a0; 
+}
+
+.copyright {
+    background: #90e0e494;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.copyright span {
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #dedede;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
