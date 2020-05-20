@@ -112,6 +112,45 @@ window.onload = (function(){
         }
     }
 
+    if(main.classList.contains("club-list")){
+        searchClubs();
+    }
+
+    //club-list functionality
+
+    function searchClubs(){
+        var clublist;
+        function getClubData(){
+            var club = new XMLHttpRequest()
+            club.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.clubs.json",true);
+            club.send();
+            club.onreadystatechange = function() {
+                if(club.readyState == 4) {
+                    clublist = JSON.parse(club.responseText);
+                    getClubnames(clublist);
+                }
+            }
+        }
+        getClubData();
+        function getClubnames(clublist){
+            //console.log(clublist);
+            var clubNames=clublist.clubs;
+            //console.log(clubNames);
+            var datalist1 = document.createElement("datalist");
+            datalist1.id="list-of-clubs";
+            var i;
+            for(i=0;i<clubNames.length;i++){
+                var option=document.createElement("option");
+                option.innerHTML=clubNames[i]["name"];
+                datalist1.appendChild(option);
+            }
+            console.log(datalist1);
+            var clubListForm = document.querySelector(".clubs");
+            clubListForm.appendChild(datalist1);
+            console.log(clubListForm);
+        }
+        
+    }
 })
 
 
