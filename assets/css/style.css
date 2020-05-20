@@ -452,8 +452,6 @@ footer { background-color: #423a3afc; }
     label { font-size: 12px; }
     .email,
     .pass { font-size: 12px; }
-
-
 }  
 
 @media only screen and (max-width: 995px) {
