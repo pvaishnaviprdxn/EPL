@@ -352,8 +352,12 @@ input[type="password"]:focus { outline: transparent; }
 /*index-page style end*/
 
 /*club list style start*/
-.list-dropdown {
-    margin-top: 45px;
+.list-dropdown { margin-top: 45px; }
+
+.list-dropdown h2{ 
+    text-align: left;
+    font-size: 30px;
+    word-spacing: 5px;
 }
 .clubs input[type="text"] {
     padding: 10px;
