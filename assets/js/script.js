@@ -112,9 +112,16 @@ window.onload = (function(){
         }
     }
 
+    //Getting Json data
+
+    
+
+
     if(main.classList.contains("club-list")){
         searchClubs();
     }
+
+
 
     //club-list functionality
 
@@ -149,8 +156,36 @@ window.onload = (function(){
             clubListForm.appendChild(datalist1);
             console.log(clubListForm);
         }
+        //display result function
+        function getResults() {
+            var y = new XMLHttpRequest();
+            y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
+            y.send();
+            y.onreadystatechange = function() {
+                if(y.readyState == 4){
+                    var clubDetails=JSON.parse(y.responseText);
+                    console.log(clubDetails);
+                }
+            }
+            
+        }
+        getResults();
+
+
+
+        var dropValue = document.getElementsByName("epl-clubs")[0];
+        dropValue.addEventListener("input",(function() {
+            var club = this.value;
+            displayRes(club);
+        })
+        )
+           
+        //display 
+        function display(club);
+        }
         
     }
+    
 })
 
 
