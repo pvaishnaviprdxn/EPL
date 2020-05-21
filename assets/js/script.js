@@ -136,9 +136,7 @@ window.onload = (function(){
         }
         getClubData();
         function getClubnames(clublist){
-            //console.log(clublist);
             var clubNames=clublist.clubs;
-            //console.log(clubNames);
             var datalist1 = document.createElement("datalist");
             datalist1.id="list-of-clubs";
             var i;
@@ -183,20 +181,17 @@ window.onload = (function(){
             var maxCount = 0;
             var details = clubDetails;
             var round = details.rounds;
-            //var match = round.matches;
-            //console.log(match);
-           var match;
+            var match;
             for(var i=0;i<round.length;i++) {
                 match = round[i]['matches'];
                 maxCount = 5
-                //console.log(match);
                 for(var k=0; k<match.length ; k++) {
                     var teamName1 = match[k].team1['name'];
                     var teamName2 =match[k].team2['name'];
                         if(club === teamName1 || club === teamName2){
                             li = document.createElement("li");
                             li.className="clubList"
-                            li.innerHTML="<span class='dates'>"+match[k].date+"</span><span class='teamsN'>Teams</span><div class='teams'><span class='t1'>"+match[k].team1['key']+"</span><span class='t2'>"+match[k].team2['key']+"</span2></div><span class='scoreN'>Score</span><div class='score'><span class='s1'>"+match[k].score1+"</span><span class='s2'>"+match[k].score2+"</span2></div>"; 
+                            li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"<span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
                         } 
                 } 
                 ullist.appendChild(li);
