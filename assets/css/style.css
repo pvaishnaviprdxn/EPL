@@ -375,6 +375,40 @@ input[type="password"]:focus { outline: transparent; }
 
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
+
+.mainlist {
+    width: 90%;
+    margin: 40px auto;
+}
+.clubList {
+    width: 150px;
+    height: 180px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.dates {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(1, 128, 128);
+}
+
+.teams,
+.score { text-align: center; }
+
+.t1,
+.t2 { color: rgb(27, 26, 26); }
+.t1,
+.t2,
+.s1,
+.s2 {
+    text-transform: capitalize;
+    padding: 10px 5px;
+    display: inline;
+    font-family: serif;
+    font-size: 14px;  
+    color: rgb(235, 0, 0);
+}
+
 /*club list style end*/
 /*js class*/
 .error { opacity: 1; }
