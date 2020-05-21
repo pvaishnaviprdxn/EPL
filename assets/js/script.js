@@ -115,9 +115,9 @@ window.onload = (function(){
     //Getting Json data
     if(main.classList.contains("club-list")){
         searchClubs();
+    }else if(main.classList.contains("match-details-page")){
+        matchesDetails();
     }
-
-
 
     //club-list functionality
 
@@ -166,7 +166,7 @@ window.onload = (function(){
 
         //function to get dropdown value
         var dropValue = document.getElementsByName("epl-clubs")[0];
-        dropValue.addEventListener("input",(function() {
+        dropValue.addEventListener("keyup",(function() {
             var club = this.value+" FC";
             displayRes(club);
         })
@@ -174,6 +174,7 @@ window.onload = (function(){
         
         //display 
         function displayRes(club) {
+
             var ullist = document.createElement("ul");
             ullist.className="mainList";
             var li;
@@ -200,6 +201,65 @@ window.onload = (function(){
             resdiv.appendChild(ullist);
         } 
         
+    }
+
+    //Match-details page functionality
+    
+    function matchesDetails() {
+        function matchday() {
+            var y = new XMLHttpRequest();
+            y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
+            y.send();
+            y.onreadystatechange = function() {
+                if(y.readyState == 4){
+                    var matches=JSON.parse(y.responseText);
+                    //console.log(matches);
+                    domElem(matches);
+                }
+            } 
+        }
+        matchday();
+        function domElem(matches) {
+            var matchForm = document.createElement("form");
+            var select = document.createElement("select");
+            select.className = "matchdayX";
+            var days= matches.rounds;
+            var option = document.createElement("option");
+            option.innerHTML="Select matchday";
+            select.appendChild(option);
+            for(var i = 0; i< days.length;i++){
+                option = document.createElement("option");
+                option.innerHTML=days[i].name;
+                select.appendChild(option);
+            }
+            matchForm.appendChild(select);
+            var selSection = document.querySelector(".match-day-content");
+            selSection.appendChild(matchForm);
+            var dropValue = document.querySelector(".matchdayX");
+            dropValue.addEventListener("input",(function() {
+                var day = this.value;
+                dayWiseResult(day,days);
+            })
+            )
+            function dayWiseResult(day,days) {
+                var ul = document.createElement("ul");
+                ul.className = "match-details2";
+                for(var j =0; j<days.length;j++){
+                    if(day == days[j].name){
+                        var allTeamRes=days[j].matches;
+                        console.log(allTeamRes);
+                        for(var k=0;k<allTeamRes.length;k++){
+                            var li = document.createElement("li");
+                            li.innerHTML = "<span class='match-date'>"+allTeamRes[k].date+"</span><div class='teams2'><span class='tname'>Teams</span><a href='#Fixme' title='"+allTeamRes[k].team1['name']+"' class='tm1'>"+allTeamRes[k].team1['name']+"</a><a href='#FIXME' title='"+allTeamRes[k].team2['name']+"' class='tm2'>"+allTeamRes[k].team2['name']+"</a></div><div class='scores2'><span class='tscore'>Scores</span><span class='sm1'>"+allTeamRes[k].score1+"</span><span class='sm2'>"+allTeamRes[k].score2+"</span></div>";               
+                            console.log(li);
+                            ul.appendChild(li);
+                        }
+                    }
+                }
+                selSection.appendChild(ul);
+            }  
+
+        }
     }
 })
 
