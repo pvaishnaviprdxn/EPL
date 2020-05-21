@@ -435,11 +435,21 @@ input[type="password"]:focus { outline: transparent; }
     float: right;
 }
 /*club list style end*/
-.page-title {}
+.page-title { margin-top: 40px; }
+
 .page-title h2 {
-
+    text-align: left;
+    padding: 20px 0;
+    font-size: 34px;
 }
-
+.match-day-content { height: 112px;}
+.match-day-content h3 {
+    text-transform: capitalize;
+    color: #ef2251;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 20px;
+}
 /*js class*/
 .error { opacity: 1; }
 .btn-disp { display: block; }
