@@ -366,6 +366,7 @@ input[type="password"]:focus { outline: transparent; }
     font-size: 30px;
     word-spacing: 5px;
 }
+
 .clubs { margin-bottom: 80px; }
 
 .clubs input[type="text"] {
@@ -377,18 +378,17 @@ input[type="password"]:focus { outline: transparent; }
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
 
-.mainlist {
-    width: 90%;
-    margin: 40px auto;
-}
-
 .clubList {
     width: 200px;
-    height: 150px;
-    display: inline-block;
+    height: 80px;
     margin-right: 10px;
+    padding: 10px 20px;
+    border: 2px solid #5f3061;
+    border-radius: 5px;
+    display: inline-block;
 }
 
+.detlist { vertical-align: middle; }
 .dates {
     display: block;
     text-align: center;
@@ -406,26 +406,26 @@ input[type="password"]:focus { outline: transparent; }
 .score { text-align: center; }
 
 .t1,
-.t2 { 
+.t2 {
     color: rgb(27, 26, 26);
     text-transform: capitalize;
     color: rgb(5, 142, 255);
-    text-align: left;
+    
 }
 
 .t1,
 .t2,
 .s1,
 .s2 {
-    padding: 10px 15px;
-    display: inline;
+    display: inline-block;
+    text-align: left;
     font-family: serif;
     font-size: 14px;  
 }
 .s1,
 .s2 {
     color: rgb(235, 0, 0);
-    text-align: right;
+    float: right;
 }
 /*club list style end*/
 /*js class*/
