@@ -377,15 +377,18 @@ input[type="password"]:focus { outline: transparent; }
 
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
+.mainList { text-align: center;}
+
 
 .clubList {
-    width: 200px;
+    width: 182px;
     height: 80px;
     margin-right: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     border: 2px solid #5f3061;
     border-radius: 5px;
     display: inline-block;
+    margin-bottom: 18px;
 }
 
 .detlist { vertical-align: middle; }
@@ -403,10 +406,14 @@ input[type="password"]:focus { outline: transparent; }
 }
 
 .teams,
-.score { text-align: center; }
+.score { 
+    text-align: center;
+    margin-top: 10px;
+}
 
 .t1,
 .t2 {
+    float: left;
     color: rgb(27, 26, 26);
     text-transform: capitalize;
     color: rgb(5, 142, 255);
