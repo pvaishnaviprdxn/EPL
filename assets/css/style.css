@@ -435,6 +435,11 @@ input[type="password"]:focus { outline: transparent; }
     float: right;
 }
 /*club list style end*/
+.page-title {}
+.page-title h2 {
+
+}
+
 /*js class*/
 .error { opacity: 1; }
 .btn-disp { display: block; }
