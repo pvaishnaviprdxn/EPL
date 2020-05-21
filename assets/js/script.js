@@ -121,8 +121,9 @@ window.onload = (function(){
 
     //club-list functionality
 
-    function searchClubs(){
+    function searchClubs() {
         var clublist;
+        var clubDetails;
         function getClubData(){
             var club = new XMLHttpRequest()
             club.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.clubs.json",true);
@@ -139,8 +140,7 @@ window.onload = (function(){
             var clubNames=clublist.clubs;
             var datalist1 = document.createElement("datalist");
             datalist1.id="list-of-clubs";
-            var i;
-            for(i=0;i<clubNames.length;i++){
+            for(var i=0;i<clubNames.length;i++){
                 var option=document.createElement("option");
                 option.innerHTML=clubNames[i]["name"];
                 datalist1.appendChild(option);
@@ -148,8 +148,9 @@ window.onload = (function(){
             var clubListForm = document.querySelector(".clubs");
             clubListForm.appendChild(datalist1);
         }
+
+
         //display result function
-        var clubDetails;
         function getResults() {
             var y = new XMLHttpRequest();
             y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
@@ -163,18 +164,16 @@ window.onload = (function(){
             } 
         }
         getResults();
-
         //function to get dropdown value
         var dropValue = document.getElementsByName("epl-clubs")[0];
         dropValue.addEventListener("keyup",(function() {
             var club = this.value+" FC";
             displayRes(club);
+            dropValue.resset();
         })
         )
-        
         //display 
         function displayRes(club) {
-
             var ullist = document.createElement("ul");
             ullist.className="mainList";
             var li;
@@ -198,9 +197,10 @@ window.onload = (function(){
                 ullist.appendChild(li);
             }
             var resdiv = document.querySelector(".results");
-            resdiv.appendChild(ullist);
+            resdiv.appendChild(ullist);  
         } 
         
+        //displayRes();
     }
 
     //Match-details page functionality
