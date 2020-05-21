@@ -113,10 +113,6 @@ window.onload = (function(){
     }
 
     //Getting Json data
-
-    
-
-
     if(main.classList.contains("club-list")){
         searchClubs();
     }
@@ -151,41 +147,64 @@ window.onload = (function(){
                 option.innerHTML=clubNames[i]["name"];
                 datalist1.appendChild(option);
             }
-            console.log(datalist1);
             var clubListForm = document.querySelector(".clubs");
             clubListForm.appendChild(datalist1);
-            console.log(clubListForm);
         }
         //display result function
+        var clubDetails;
         function getResults() {
             var y = new XMLHttpRequest();
             y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
             y.send();
             y.onreadystatechange = function() {
                 if(y.readyState == 4){
-                    var clubDetails=JSON.parse(y.responseText);
-                    console.log(clubDetails);
+                    clubDetails=JSON.parse(y.responseText);
+                    console.log(clubDetails.rounds);
+                    return clubDetails;
                 }
-            }
-            
+            } 
         }
         getResults();
 
-
-
+        //function to get dropdown value
         var dropValue = document.getElementsByName("epl-clubs")[0];
         dropValue.addEventListener("input",(function() {
-            var club = this.value;
+            var club = this.value+" FC";
             displayRes(club);
         })
         )
-           
-        //display 
-        function display(club);
-        }
         
+        //display 
+        function displayRes(club) {
+            var ullist = document.createElement("ul");
+            ullist.className="mainList";
+            var li;
+            var list;
+            var maxCount = 0;
+            var details = clubDetails;
+            var round = details.rounds;
+            //var match = round.matches;
+            //console.log(match);
+           var match;
+            for(var i=0;i<round.length;i++) {
+                match = round[i]['matches'];
+                maxCount = 5
+                //console.log(match);
+                for(var k=0; k<match.length ; k++) {
+                    var teamName1 = match[k].team1['name'];
+                    var teamName2 =match[k].team2['name'];
+                        if(club === teamName1 || club === teamName2){
+                            li = document.createElement("li");
+                            li.className="clubList"
+                            li.innerHTML="<span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['key']+"</span><span class='t2'>"+match[k].team2['key']+"</span2></div><div class='score'><span class='s1'>"+match[k].score1+"</span><span class='s2'>"+match[k].score2+"</span2></div>"; 
+                        } 
+                } 
+                ullist.appendChild(li);
+            }
+            var resdiv = document.querySelector(".results");
+            resdiv.appendChild(ullist);
+        }  
     }
-    
 })
 
 
