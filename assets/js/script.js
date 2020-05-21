@@ -196,7 +196,7 @@ window.onload = (function(){
                         if(club === teamName1 || club === teamName2){
                             li = document.createElement("li");
                             li.className="clubList"
-                            li.innerHTML="<span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['key']+"</span><span class='t2'>"+match[k].team2['key']+"</span2></div><div class='score'><span class='s1'>"+match[k].score1+"</span><span class='s2'>"+match[k].score2+"</span2></div>"; 
+                            li.innerHTML="<span class='dates'>"+match[k].date+"</span><span class='teamsN'>Teams</span><div class='teams'><span class='t1'>"+match[k].team1['key']+"</span><span class='t2'>"+match[k].team2['key']+"</span2></div><span class='scoreN'>Score</span><div class='score'><span class='s1'>"+match[k].score1+"</span><span class='s2'>"+match[k].score2+"</span2></div>"; 
                         } 
                 } 
                 ullist.appendChild(li);
