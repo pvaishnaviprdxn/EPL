@@ -357,7 +357,7 @@ input[type="password"]:focus { outline: transparent; }
 
 /*club list style start*/
 .list-dropdown { 
-    margin-top: 45px;
+    margin: 45px 0;
     height: 100%;
 }
 
@@ -366,6 +366,7 @@ input[type="password"]:focus { outline: transparent; }
     font-size: 30px;
     word-spacing: 5px;
 }
+.clubs { margin-bottom: 80px; }
 
 .clubs input[type="text"] {
     padding: 10px;
@@ -380,35 +381,52 @@ input[type="password"]:focus { outline: transparent; }
     width: 90%;
     margin: 40px auto;
 }
+
 .clubList {
-    width: 150px;
-    height: 180px;
+    width: 200px;
+    height: 150px;
     display: inline-block;
     margin-right: 10px;
 }
+
 .dates {
+    display: block;
     text-align: center;
     font-weight: bold;
     color: rgb(1, 128, 128);
+}
+
+.teamsN,
+.scoreN { 
+    color: black;
+    font-size: 14px;
 }
 
 .teams,
 .score { text-align: center; }
 
 .t1,
-.t2 { color: rgb(27, 26, 26); }
+.t2 { 
+    color: rgb(27, 26, 26);
+    text-transform: capitalize;
+    color: rgb(5, 142, 255);
+    text-align: left;
+}
+
 .t1,
 .t2,
 .s1,
 .s2 {
-    text-transform: capitalize;
-    padding: 10px 5px;
+    padding: 10px 15px;
     display: inline;
     font-family: serif;
     font-size: 14px;  
-    color: rgb(235, 0, 0);
 }
-
+.s1,
+.s2 {
+    color: rgb(235, 0, 0);
+    text-align: right;
+}
 /*club list style end*/
 /*js class*/
 .error { opacity: 1; }
@@ -422,8 +440,6 @@ input[type="password"]:focus { outline: transparent; }
   footer styling starts here
 =================================*/ 
 footer { 
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: #423a3afc;
 }
