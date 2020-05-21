@@ -191,14 +191,15 @@ window.onload = (function(){
                         if(club === teamName1 || club === teamName2){
                             li = document.createElement("li");
                             li.className="clubList"
-                            li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"<span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
+                            li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
                         } 
                 } 
                 ullist.appendChild(li);
             }
             var resdiv = document.querySelector(".results");
             resdiv.appendChild(ullist);
-        }  
+        } 
+        
     }
 })
 
