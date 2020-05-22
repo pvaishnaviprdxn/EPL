@@ -377,8 +377,20 @@ input[type="password"]:focus { outline: transparent; }
 
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
-.mainList { text-align: center;}
+.mainList { text-align: center; }
+.club-results { margin-bottom: 50px; }
+.results { text-align: center; }
 
+.results button {
+    text-transform: capitalize;
+    padding: 6px 12px;
+    border: 2px solid #11bcce;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    background: #11bcce;
+    color: white;
+}
 
 .clubList {
     width: 182px;
@@ -429,6 +441,7 @@ input[type="password"]:focus { outline: transparent; }
     font-family: serif;
     font-size: 14px;  
 }
+
 .s1,
 .s2 {
     color: rgb(235, 0, 0);
@@ -524,6 +537,7 @@ input[type="password"]:focus { outline: transparent; }
     float: right;
     padding: 12px 0;
 }
+
 /*match-page style end*/
 
 /*js class*/
