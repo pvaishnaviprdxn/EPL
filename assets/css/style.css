@@ -201,7 +201,7 @@ h1 a img { width: 200px; }
 .login-btn {
     text-transform: capitalize;
     padding: 6px 27px;
-    border: 2px solid rgb(255, 254, 254);
+    border: 2px solid rgb(255, 251, 251);
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -217,7 +217,7 @@ h1 a img { width: 200px; }
     background: transparent;
     border: 2px solid;
     color: rgb(255, 254, 254);
-    transition: .4 ease-in-out;
+    transition: .4s ease-in-out;
     -webkit-transition: .4s ease-in-out;
     -ms-transition: .4s ease-in-out;
     -moz-transition: .4s ease-in-out;
@@ -334,7 +334,7 @@ input[type="password"] {
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    background-color: rgb(44, 199, 226);
+    background-color: rgb(14, 207, 241);
     color: white;
     font-weight: bold;
     font-family: serif;
@@ -344,7 +344,7 @@ input[type="password"] {
     background:transparent;
     border: 3px solid;
     border-color:  rgb(255, 254, 254);
-    transition: .4 ease-in-out;
+    transition: .4s ease-in-out;
     -webkit-transition: .4s ease-in-out;
     -ms-transition: .4s ease-in-out;
     -moz-transition: .4s ease-in-out;
@@ -384,7 +384,7 @@ input[type="password"]:focus { outline: transparent; }
 .results button {
     text-transform: capitalize;
     padding: 6px 12px;
-    border: 2px solid #11bcce;
+    border: 2px solid #12c7db;
     border-radius: 2px;
     font-weight: bold;
     font-size: 14px;
