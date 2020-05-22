@@ -124,6 +124,7 @@ window.onload = (function(){
     function searchClubs() {
         var clublist;
         var clubDetails;
+        //Team names
         function getClubData(){
             var club = new XMLHttpRequest()
             club.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.clubs.json",true);
@@ -131,26 +132,12 @@ window.onload = (function(){
             club.onreadystatechange = function() {
                 if(club.readyState == 4) {
                     clublist = JSON.parse(club.responseText);
-                    getClubnames(clublist);
+                    var clubNames=clublist.clubs;
+                    addOptioninList(clubNames)
                 }
             }
         }
-        getClubData();
-        function getClubnames(clublist){
-            var clubNames=clublist.clubs;
-            var datalist1 = document.createElement("datalist");
-            datalist1.id="list-of-clubs";
-            for(var i=0;i<clubNames.length;i++){
-                var option=document.createElement("option");
-                option.innerHTML=clubNames[i]["name"];
-                datalist1.appendChild(option);
-            }
-            var clubListForm = document.querySelector(".clubs");
-            clubListForm.appendChild(datalist1);
-        }
-
-
-        //display result function
+        //Scores result
         function getResults() {
             var y = new XMLHttpRequest();
             y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
@@ -164,45 +151,87 @@ window.onload = (function(){
             } 
         }
         getResults();
+        getClubData();
+        //Addin club name options in datalist
+        function addOptioninList(clubNames){
+            var datalist1 = document.createElement("datalist");
+            datalist1.id="list-of-clubs";
+            for(var i=0;i<clubNames.length;i++){
+                var option=document.createElement("option");
+                option.innerHTML=clubNames[i]["name"];
+                datalist1.appendChild(option);
+            }
+            var clubListForm = document.querySelector(".clubs");
+            clubListForm.appendChild(datalist1);
+            var dropValue = document.getElementsByName("epl-clubs")[0];
+            dropValue.addEventListener("keyup",(function() {
+                var club = this.value+" FC";
+                displayRes(club);
+            })
+            )
+        }
+    
         //function to get dropdown value
-        var dropValue = document.getElementsByName("epl-clubs")[0];
-        dropValue.addEventListener("keyup",(function() {
-            var club = this.value+" FC";
-            displayRes(club);
-            dropValue.resset();
-        })
-        )
         //display 
+        var count=5;
         function displayRes(club) {
+            var listName = document.querySelector(".mainList");
+            if(typeof(listName) != 'undefined' && listName != null){
+                var ul = document.querySelector('.mainList');
+                ul.parentNode.removeChild(ul);
+            }
             var ullist = document.createElement("ul");
             ullist.className="mainList";
             var li;
             var list;
-            var maxCount = 0;
+            var count=5;
             var details = clubDetails;
             var round = details.rounds;
             var match;
-            for(var i=0;i<round.length;i++) {
+            for(var i =0; i < count && i<round.length; i++) {
                 match = round[i]['matches'];
-                maxCount = 5
                 for(var k=0; k<match.length ; k++) {
                     var teamName1 = match[k].team1['name'];
                     var teamName2 =match[k].team2['name'];
-                        if(club === teamName1 || club === teamName2){
-                            li = document.createElement("li");
-                            li.className="clubList"
-                            li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
-                        } 
+                    if(club === teamName1 || club === teamName2){
+                        li = document.createElement("li");
+                        li.className="clubList"
+                        li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
+                    }
                 } 
                 ullist.appendChild(li);
             }
             var resdiv = document.querySelector(".results");
             resdiv.appendChild(ullist);  
-        } 
-        /*function getTeamFromLs() {
+            var btn=document.createElement("button");
+            btn.textContent="Show more"; 
+            resdiv.appendChild(btn);
 
-        }
-        getTeamFromLs();*/
+            //show more functionality after clicking on button
+            btn.onclick=function() {
+                count=count+5;
+                console.log(count);
+                displayData();
+            }
+            function displayData() {
+                for(var i =count; i < count+5 && i<round.length; i++) {
+                    match = round[i]['matches'];
+                    for(var k=0; k<match.length ; k++) {
+                        var teamName1 = match[k].team1['name'];
+                        var teamName2 =match[k].team2['name'];
+                        if(club === teamName1 || club === teamName2){
+                            li = document.createElement("li");
+                            li.className="clubList"
+                            li.innerHTML="<div class='detlist'><span class='dates'>"+match[k].date+"</span><div class='teams'><span class='t1'>"+match[k].team1['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div><div class='score'><span class='t1'>"+match[k].team2['name']+"</span><span class='s2'>"+match[k].score2+"</span2></div></div>"; 
+                        }
+                    } 
+                    ullist.appendChild(li); 
+                }
+                if(i == round.length) {
+                    btn.parentNode.removeChild(btn);
+                }
+            }
+        } 
     }
 
     //Match-details page functionality start//
