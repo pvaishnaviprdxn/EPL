@@ -242,21 +242,23 @@ window.onload = (function(){
             })
             )
             function dayWiseResult(day,days) {
+                var ulist = document.querySelector(".match-details2");
+                if(typeof(ulist) != 'undefined' && ulist != null){
+                    var ul2 = document.querySelector('.match-details2');
+                    ul2.parentNode.removeChild(ul2);
+                }
                 var ul = document.createElement("ul");
                 ul.className = "match-details2";
                 for(var j =0; j<days.length;j++){
                     if(day == days[j].name){
                         var allTeamRes=days[j].matches;
-                        console.log(allTeamRes);
                         for(var k=0;k<allTeamRes.length;k++){
                             var li = document.createElement("li");
-                            li.innerHTML = "<span class='match-date'>"+allTeamRes[k].date+"</span><div class='teams2'><span class='tname'>Teams</span><a href='#Fixme' title='"+allTeamRes[k].team1['name']+"' class='tm1'>"+allTeamRes[k].team1['name']+"</a><a href='#FIXME' title='"+allTeamRes[k].team2['name']+"' class='tm2'>"+allTeamRes[k].team2['name']+"</a></div><div class='scores2'><span class='tscore'>Scores</span><span class='sm1'>"+allTeamRes[k].score1+"</span><span class='sm2'>"+allTeamRes[k].score2+"</span></div>";               
-                            console.log(li);
+                            li.innerHTML = "<span class='match-date'>"+allTeamRes[k].date+"</span><div class='teams2'><span class='tname'>Teams</span><a href='#Fixme' title='"+allTeamRes[k].team1['name']+"' class='tm1 team-name1'>"+allTeamRes[k].team1['name']+"</a><a href='#FIXME' title='"+allTeamRes[k].team2['name']+"' class='tm2 team-name1'>"+allTeamRes[k].team2['name']+"</a></div><div class='scores2'><span class='tscore'>Scores</span><span class='sm1'>"+allTeamRes[k].score1+"</span><span class='sm2'>"+allTeamRes[k].score2+"</span></div>";               
                             ul.appendChild(li);
                         }
-                    }
+                    } 
                 }
-                selSection.appendChild(ul);
             }  
 
         }
