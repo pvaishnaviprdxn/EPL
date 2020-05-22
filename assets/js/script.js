@@ -259,8 +259,8 @@ window.onload = (function(){
                         }
                     } 
                 }
-            }  
-
+                selSection.appendChild(ul);
+            }
         }
     }
 })
