@@ -408,7 +408,8 @@ input[type="password"]:focus { outline: transparent; }
     font-family: serif;
 }
 .history {
-
+    padding: 50px;
+    background: #f5f5f5;
 }
 .history-of-league p {
     font-family: serif;
