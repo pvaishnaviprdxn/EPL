@@ -170,11 +170,10 @@ window.onload = (function(){
             })
             )
         }
-    
-        //function to get dropdown value
-        //display 
+        //display first 5 results of the club
         var count=5;
         function displayRes(club) {
+           
             var listName = document.querySelector(".mainList");
             if(typeof(listName) != 'undefined' && listName != null){
                 var ul = document.querySelector('.mainList');
@@ -204,10 +203,11 @@ window.onload = (function(){
             var resdiv = document.querySelector(".results");
             resdiv.appendChild(ullist);  
             var btn=document.createElement("button");
+            btn.class="show-morebtn";
             btn.textContent="Show more"; 
             resdiv.appendChild(btn);
 
-            //show more functionality after clicking on button
+            //show more club results functionality after clicking on button
             btn.onclick=function() {
                 count=count+5;
                 console.log(count);
@@ -231,7 +231,7 @@ window.onload = (function(){
                     btn.parentNode.removeChild(btn);
                 }
             }
-        } 
+        }
     }
 
     //Match-details page functionality start//
@@ -296,12 +296,15 @@ window.onload = (function(){
                         var matchTeam=this.textContent;
                         localStorage.setItem("Team-name",matchTeam);
                         window.location.assign("club-list.html");
+                        //showingRes();
                     })
                 }
             } 
         }
     }
     //Match-details page functionality end//
+    
+
 
     //logout function start
     var logOut = document.querySelector(".logout");
