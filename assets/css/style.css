@@ -435,6 +435,8 @@ input[type="password"]:focus { outline: transparent; }
     float: right;
 }
 /*club list style end*/
+
+/*match-page style start*/
 .page-title { margin-top: 40px; }
 
 .page-title h2 {
@@ -442,7 +444,9 @@ input[type="password"]:focus { outline: transparent; }
     padding: 20px 0;
     font-size: 34px;
 }
-.match-day-content { height: 112px;}
+
+.match-day-content { height: auto; }
+
 .match-day-content h3 {
     text-transform: capitalize;
     color: #ef2251;
@@ -450,6 +454,78 @@ input[type="password"]:focus { outline: transparent; }
     font-weight: bold;
     font-size: 20px;
 }
+
+.matchdayX {
+    text-transform: capitalize;
+    width: 100%;
+    height: 36px;
+    padding: 0 8px;
+    margin: 40px 0;
+    border: 2px solid #048888;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.match-details2 {
+    width: 90%;
+    margin: auto;
+}
+
+.match-details2 li {
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+    margin: 0 15px 32px 15px;
+    border-radius: 3px;
+    background: #f3f9ff;
+    box-shadow: 0 0 10px black;
+
+}
+
+.match-date { font-weight: bold; }
+
+.teams2 { 
+    width: 80%;
+    display: inline-block;
+    padding: 12px 0;
+}
+
+.tname {
+    display: block;
+    text-align: center;
+}
+
+.tm1,.tm2 {
+    display: block;
+    font-size: 15px;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tm1 { 
+    color: #417916;
+    padding-top: 12px;
+}
+
+.tm2 { color: #411679; }
+
+.sm1,
+.sm2 {     
+    display: block;
+    text-align: center;
+
+}
+
+.sm1 { padding-top: 12px; }
+
+.scores2 {
+    width: 20%;
+    float: right;
+    padding: 12px 0;
+}
+/*match-page style end*/
+
 /*js class*/
 .error { opacity: 1; }
 .btn-disp { display: block; }
