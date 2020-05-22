@@ -199,12 +199,13 @@ window.onload = (function(){
             var resdiv = document.querySelector(".results");
             resdiv.appendChild(ullist);  
         } 
-        
-        //displayRes();
+        /*function getTeamFromLs() {
+
+        }
+        getTeamFromLs();*/
     }
 
-    //Match-details page functionality
-    
+    //Match-details page functionality start//
     function matchesDetails() {
         function matchday() {
             var y = new XMLHttpRequest();
@@ -260,9 +261,28 @@ window.onload = (function(){
                     } 
                 }
                 selSection.appendChild(ul);
-            }
+                var names= document.getElementsByClassName("team-name1");
+                for(var k=0;k<names.length;k++){
+                    names[k].addEventListener("click",function() {
+                        var matchTeam=this.textContent;
+                        localStorage.setItem("Team-name",matchTeam);
+                        window.location.assign("club-list.html");
+                    })
+                }
+            } 
         }
     }
+    //Match-details page functionality end//
+
+    //logout function start
+    var logOut = document.querySelector(".logout");
+    logOut.addEventListener("click", logoutSession);
+    
+    function logoutSession(e) {
+      localStorage.clear();
+      window.location.assign("index.html");
+    }
+
 })
 
 
