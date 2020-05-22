@@ -363,13 +363,16 @@ input[type="password"]:focus { outline: transparent; }
     background-size: cover;
 
 }
+
 .tag-line {
     width: 100%;
     padding: 50px;
     margin: 0 auto;
     text-align: center;
 }
+
 .tag-line li { display: none; }
+
 .slider {
     position: relative;
     margin: auto;
@@ -380,7 +383,9 @@ input[type="password"]:focus { outline: transparent; }
     color: white;
     padding: 50px 0;
 }
+
 .about-league { margin: 50px 0; }
+
 .about-league h3,
 .history-of-league h3 {
     text-transform: capitalize;
@@ -401,16 +406,19 @@ input[type="password"]:focus { outline: transparent; }
     font-size: 40px;
     font-weight: bold;
 }
+
 .about-league p {
     text-align: center;
     padding: 0 20px;
     font-size: 22px;
     font-family: serif;
 }
+
 .history {
     padding: 50px;
     background: #f5f5f5;
 }
+
 .history-of-league p {
     font-family: serif;
     padding: 10px 0;
