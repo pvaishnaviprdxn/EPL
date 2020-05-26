@@ -889,6 +889,92 @@ footer {
         top: 0;
         font-size: 12px;
     }
+
+
+    .hamburger { 
+        text-indent: -9999px;
+        display: inline-block;
+        color: white;
+    }
+
+    .hamburger::before {
+        content: '\f0c9';
+        text-indent: 0;
+        position: absolute;
+        left: 88%;
+        font-size: 24px;
+        font-family: "Fontawesome";
+    }
+
+    .menu { display: none; }
+    .menu li { 
+        display: block;
+        text-align: center;
+    }
+    .menu li a { margin-right: 0; }
+    .logout-btn { display: none; }
+    .menu-active {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 30%;
+        height: 100vh;
+        background: rgba(66, 58, 58, .98);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 70%;
+        z-index: 1;
+    }
+    .no-scroll {
+        overflow: hidden;
+        scroll-behavior: unset;
+    }
+    .logout-active {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        left: 70%;
+        top: 130px;
+        text-align: center;
+    }
+    .banner { background-size: 540px 500px; }
+    .slides h2 { font-size: 32px; }
+
+    .about-league p,
+    .history-of-league p { font-size: 15px; }
+
+    .about-league h3, 
+    .history-of-league h3, 
+    .awards-div h3 { font-size: 28px; }
+
+    .award-content { width: 46%; }
+
+    .award-content p { 
+        font-size: 15px;
+        padding-top: 5px;
+    }
+
+    figure img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .logo h5 a img { width: 100px; }
+
+    .clubList{
+        width: 32%;
+        margin-right: 20px;
+    } 
+
+    .match-details2 li { width: 300px; }
+    .teams2 { width: 70%; }
+    .scores2 { width: 30%; }
 }
 @media only screen and (max-width: 320px) {
     /*login page media-query*/
