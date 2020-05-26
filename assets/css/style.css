@@ -920,12 +920,15 @@ footer {
     }
 
     .menu { display: none; }
+
     .menu li { 
         display: block;
         text-align: center;
     }
+
     .menu li a { margin-right: 0; }
     .logout-btn { display: none; }
+
     .menu-active {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -942,10 +945,12 @@ footer {
         left: 70%;
         z-index: 1;
     }
+
     .no-scroll {
         overflow: hidden;
         scroll-behavior: unset;
     }
+
     .logout-active {
         display: block;
         position: absolute;
@@ -956,6 +961,7 @@ footer {
         top: 130px;
         text-align: center;
     }
+
     .banner { background-size: 540px 500px; }
     .slides h2 { font-size: 32px; }
 
@@ -993,32 +999,30 @@ footer {
 
 /*media query for 320px start*/
 @media only screen and (max-width: 320px) {
-    /*login-page*/
     .login-page { background-size: 320px 418px; }
 
     .modal { 
         width: 175px;
-        margin: 0 auto;
         top: 5%;
         left: 29px;
+        margin: 0 auto;
     }
-    /*home-page*/
+
     header h1 a img { width: 75px; }
     .hamburger::before { font-size: 20px; }
-    
+
     .menu-active {
-        width: 40%;
         left: 60%;
+        width: 40%;
     }
 
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
-    
+
     .banner {
-        height: 148px;
         background-size: contain;
         background-repeat: no-repeat;
-        
+        height: 148px;
     }
 
     .logout { font-size: 8px; }
@@ -1038,8 +1042,8 @@ footer {
     }
     
     .award-content {
-        width: 100%;
         display: block;
+        width: 100%;
     }
 
     .award-content p { font-size: 12px; }
@@ -1053,12 +1057,12 @@ footer {
         width: 140px;
         height: 140px;
     }
-    /*club-list*/
+
     .clubList {
         width: 70%;
         margin-right: 0;
     }
-    /*match-details*/
+
     .match-details2 li { width: 190px; }
     .teams2 { width: 60%; }
     .scores2 { width: 40%; }
@@ -1066,9 +1070,9 @@ footer {
     .clubs input[type="text"] { width: 92%; }
     .t1, .t2, .s1, .s2 { font-size: 16px; }
     .page-title h2 { font-size: 28px; }
-    /*footer*/
     .logo h5 a img { width: 90px; }
     .footer-nav li a { font-size: 11px; }
     .copyright span { font-size: 10px; }
+    
 }
 /*media query for 320px end*/
