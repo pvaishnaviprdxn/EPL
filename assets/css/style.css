@@ -107,7 +107,7 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
-header { background-color: #423a3afc; }
+header { background-color:rgba(66, 58, 58, .98); }
 
 header h1 {
     text-align: left;
