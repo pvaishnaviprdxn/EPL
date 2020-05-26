@@ -302,6 +302,9 @@ input[type="password"] {
     height: 2px;
     padding: 0 7px;
     display: block;
+    background-image: -o-linear-gradient(to left,rgb(43, 140, 153),rgb(0, 247, 255));
+    background-image: -webkit-linear-gradient(to right,rgb(43, 140, 153),rgb(0, 247, 255));
+    background-image: -moz-linear-gradient(to right,rgb(43, 140, 153),rgb(0, 247, 255));
     background-image: linear-gradient(to right,rgb(43, 140, 153),rgb(0, 247, 255));
 }
 
@@ -323,7 +326,7 @@ input[type="password"] {
 .submit-form { 
     text-align: center;
     margin-top: 20px;
- }
+}
  
 .submit { 
     text-transform: uppercase;
