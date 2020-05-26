@@ -765,9 +765,9 @@ footer {
     border-color: #a7a0a0; 
     -webkit-border-radius: 16px;
     -ms-border-radius: 16px;
-    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
     -o-border-radius: 16px;
-    margin-right: 16px;
+    margin-left: 6px;
     float: right;
     background: #ffffff;
     color: rgb(61, 57, 57);
@@ -821,6 +821,8 @@ footer {
     /*login page*/
     h1 a img { width: 140px; }
     .login-btn { padding: 3px 13px; }
+    /*logout-btn*/
+    .logout-btn { left: 39%; }
     /*match-details page*/
     .teams2 { width: 50%; }
     .scores2 { width: 30%; }
@@ -846,7 +848,9 @@ footer {
     }
 
     .pass-error2 { font-size: 7.56px; }
-
+    /*logout-btn*/
+    .logout-btn { left: 20.5%; }
+    
     /*home-page*/
     .banner { background-size: 768px 500px; }
     .slides h2 { font-size: 42px; }
