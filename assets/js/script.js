@@ -347,7 +347,7 @@ window.onload = (function(){
         }
     }
     //Match-details page functionality end//
-    
+
     //hamburger function start
     var menu = document.querySelector(".hamburger");
     menu.addEventListener("click",showMenu,false);
@@ -366,8 +366,8 @@ window.onload = (function(){
     logOut.addEventListener("click", logoutSession);
     
     function logoutSession(e) {
-      localStorage.clear();
-      window.location.assign("index.html");
+        localStorage.removeItem("loggedUser");
+        window.location.assign("index.html");
     }
 
 })
