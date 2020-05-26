@@ -886,9 +886,9 @@ footer {
 /*media query for 540px start*/
 @media only screen and (max-width: 540px) {
     /*login page media-query*/
-    .modal {
-        top: 10%; 
+    .modal { 
         left: 160px;
+        top: 10%;
     }
 
     .login-form { padding: 20px 0; }
@@ -903,7 +903,7 @@ footer {
         top: 0;
         font-size: 12px;
     }
-    /*hambburger/menu style*/
+
     .hamburger { 
         text-indent: -9999px;
         display: inline-block;
@@ -920,14 +920,12 @@ footer {
     }
 
     .menu { display: none; }
-
     .menu li { 
         display: block;
         text-align: center;
     }
     .menu li a { margin-right: 0; }
     .logout-btn { display: none; }
-
     .menu-active {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -937,29 +935,27 @@ footer {
         align-items: center;
         width: 30%;
         height: 100vh;
+        background: rgba(66, 58, 58, .98);
         display: block;
         position: absolute;
         top: 0;
         left: 70%;
         z-index: 1;
-        background: rgba(66, 58, 58, .98);  
     }
-
     .no-scroll {
         overflow: hidden;
         scroll-behavior: unset;
     }
-
     .logout-active {
-        text-align: center;
         display: block;
         position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
         left: 70%;
         top: 130px;
-        z-index: 1;
+        text-align: center;
     }
-
-    /*home-page*/
     .banner { background-size: 540px 500px; }
     .slides h2 { font-size: 32px; }
 
@@ -973,8 +969,8 @@ footer {
     .award-content { width: 46%; }
 
     .award-content p { 
-        padding-top: 5px;
         font-size: 15px;
+        padding-top: 5px;
     }
 
     figure img {
@@ -982,16 +978,16 @@ footer {
         height: 170px;
     }
 
+    .logo h5 a img { width: 100px; }
+
     .clubList{
         width: 32%;
         margin-right: 20px;
     } 
-    /*match-details*/
+
     .match-details2 li { width: 300px; }
     .teams2 { width: 70%; }
     .scores2 { width: 30%; }
-    /*footer*/
-    .logo h5 a img { width: 100px; }
 }
 /*media query for 540px end*/
 
