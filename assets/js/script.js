@@ -287,12 +287,12 @@ window.onload = (function(){
             y.onreadystatechange = function() {
                 if(y.readyState == 4){
                     var matches=JSON.parse(y.responseText);
-                    //console.log(matches);
                     domElem(matches);
                 }
             } 
         }
         matchday();
+        //Create select dropdown
         function domElem(matches) {
             var matchForm = document.createElement("form");
             var select = document.createElement("select");
@@ -309,12 +309,14 @@ window.onload = (function(){
             matchForm.appendChild(select);
             var selSection = document.querySelector(".match-day-content");
             selSection.appendChild(matchForm);
+
             var dropValue = document.querySelector(".matchdayX");
             dropValue.addEventListener("input",(function() {
                 var day = this.value;
                 dayWiseResult(day,days);
             })
-            )
+            );
+            //display matchdaywise result 
             function dayWiseResult(day,days) {
                 var ulist = document.querySelector(".match-details2");
                 if(typeof(ulist) != 'undefined' && ulist != null){
@@ -328,7 +330,7 @@ window.onload = (function(){
                         var allTeamRes=days[j].matches;
                         for(var k=0;k<allTeamRes.length;k++){
                             var li = document.createElement("li");
-                            li.innerHTML = "<span class='match-date'>"+allTeamRes[k].date+"</span><div class='teams2'><span class='tname'>Teams</span><a href='#Fixme' title='"+allTeamRes[k].team1['name']+"' class='tm1 team-name1'>"+allTeamRes[k].team1['name']+"</a><a href='#FIXME' title='"+allTeamRes[k].team2['name']+"' class='tm2 team-name1'>"+allTeamRes[k].team2['name']+"</a></div><div class='scores2'><span class='tscore'>Scores</span><span class='sm1'>"+allTeamRes[k].score1+"</span><span class='sm2'>"+allTeamRes[k].score2+"</span></div>";               
+                            li.innerHTML = "<span class='match-date'>"+allTeamRes[k].date+"</span><div class='teams2'><span class='tname'>Teams</span><a href='#FIXME' title='"+allTeamRes[k].team1['name']+"' class='tm1 team-name1'>"+allTeamRes[k].team1['key'].toUpperCase()+"</a><a href='#FIXME' title='"+allTeamRes[k].team2['name']+"' class='tm2 team-name1'>"+allTeamRes[k].team2['key'].toUpperCase()+"</a></div><div class='scores2'><span class='tscore'>Scores</span><span class='sm1'>"+allTeamRes[k].score1+"</span><span class='sm2'>"+allTeamRes[k].score2+"</span></div>";               
                             ul.appendChild(li);
                         }
                     } 
@@ -338,9 +340,7 @@ window.onload = (function(){
                 for(var k=0;k<names.length;k++){
                     names[k].addEventListener("click",function() {
                         var matchTeam=this.textContent;
-                        localStorage.setItem("Team-name",matchTeam);
-                        window.location.assign("club-list.html");
-                        //showingRes();
+                        window.location = 'club-list.html?team-name='+matchTeam;
                     })
                 }
             } 
