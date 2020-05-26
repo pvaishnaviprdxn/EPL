@@ -765,9 +765,9 @@ footer {
     border-color: #a7a0a0; 
     -webkit-border-radius: 16px;
     -ms-border-radius: 16px;
-    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
     -o-border-radius: 16px;
-    margin-right: 16px;
+    margin-left: 6px;
     float: right;
     background: #ffffff;
     color: rgb(61, 57, 57);
