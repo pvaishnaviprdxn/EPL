@@ -130,7 +130,7 @@ nav { display: inline-block; }
 }
 
 .menu li a.home.active,
-.menu li a.club-list.active,
+.menu li a.club-lists.active,
 .menu li a:hover {
     border-bottom: 2px solid;
     -webkit-border-bottom: 2px solid;
