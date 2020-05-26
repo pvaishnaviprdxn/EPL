@@ -1015,9 +1015,14 @@ footer {
         width: 40%;
     }
 
+    .menu-active {
+        width: 40%;
+        left: 60%;
+    }
+    
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
-
+    
     .banner {
         height: 148px;
         background-size: contain;
