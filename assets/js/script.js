@@ -104,12 +104,40 @@ window.onload = (function(){
 
 
     //Getting Json data
+    if(main.classList.contains("home-page")){
+        homePage();
+    }
     if(main.classList.contains("club-list")){
         searchClubs();
     }else if(main.classList.contains("match-details-page")){
         matchesDetails();
     }
 
+    //home-page functionality start here 
+    function homePage() {
+        if(localStorage.getItem("loggedUser") == null){
+            window.location.assign("index.html");
+        }
+        blockBack();
+        var slidei;
+        slidei = 0;
+        slideShowing();
+        function slideShowing(slideIndex){
+            var slides=document.getElementsByClassName("slides");
+            var i;
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = 0; 
+            }
+            slidei++;
+            if(slidei > slides.length){
+                slidei=1;
+            }
+            slides[slidei-1].style.opacity = 1; 
+            setTimeout(slideShowing, 2200);
+        }
+    }
+
+    //home-page functionality end here
     //club-list functionality
 
     function searchClubs() {
