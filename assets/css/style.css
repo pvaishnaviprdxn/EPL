@@ -434,10 +434,10 @@ section { text-align: center; }
 }
 
 .history-of-league p {
-    font-family: serif;
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;
     font-size: 20px;
+    font-family: serif;
 }
 
 .awards-div { 
@@ -453,9 +453,9 @@ section { text-align: center; }
 }
 
 .award-content {
+    text-align: center;
     width: 70%;
     padding-top: 8%;
-    text-align: center;
     display: inline-block;
 }
 
@@ -522,10 +522,10 @@ figure img {
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    font-weight: bold;
-    font-size: 14px;
     background: #11bcce;
     color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .clubList {
@@ -549,8 +549,8 @@ figure img {
 .dates {
     text-align: center;
     display: block;
-    font-weight: bold;
     color: rgb(1, 128, 128);
+    font-weight: bold;
 }
 
 .teamsN,
@@ -652,7 +652,8 @@ figure img {
     display: block;
 }
 
-.tm1,.tm2 {
+.tm1,
+.tm2 {
     text-align: center;
     display: block;
     font-size: 15px;
