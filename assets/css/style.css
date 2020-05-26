@@ -476,8 +476,8 @@ figure img {
 
 .list-dropdown { 
     height: 100%;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .list-dropdown h2{ 
@@ -487,7 +487,7 @@ figure img {
 }
 
 .clubs { margin-bottom: 30px; }
-
+.club-list { background: rgb(255, 252, 248); }
 .clubs input[type="text"] {
     padding: 10px;
     border: 1px solid;
@@ -501,7 +501,7 @@ figure img {
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
 .mainList { text-align: center; }
-.club-results { margin-bottom: 50px; }
+.club-results { padding-bottom: 50px; }
 
 .club-results h3 {
     text-align: left;
