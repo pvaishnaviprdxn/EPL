@@ -977,7 +977,6 @@ footer {
     .scores2 { width: 30%; }
 }
 @media only screen and (max-width: 320px) {
-    /*login page media-query*/
     .login-page { background-size: 320px 418px; }
 
     .modal { 
@@ -986,4 +985,70 @@ footer {
         left: 29px;
         margin: 0 auto;
     }
+
+    header h1 a img { width: 75px; }
+    .hamburger::before { font-size: 20px; }
+
+    .menu-active {
+        left: 60%;
+        width: 40%;
+    }
+
+    .menu li a { font-size: 12px; }
+    .logout-active { left: 60%; }
+
+    .banner {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 148px;
+    }
+
+    .logout { font-size: 8px; }
+    .tag-line { padding: 0; }
+    .slides h2 { font-size: 18px;}
+
+    .about-league p,
+    .history-of-league p { font-size: 12px; }
+
+    .about-league h3, 
+    .history-of-league h3, 
+    .awards-div h3 { font-size: 18px; }
+
+    .awards {
+        width: 100%;
+        height: 350px;
+    }
+    
+    .award-content {
+        display: block;
+        width: 100%;
+    }
+
+    .award-content p { font-size: 12px; }
+
+    figure { 
+        padding-top: 25px;
+        float: none;
+    }
+
+    figure img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .clubList {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .match-details2 li { width: 190px; }
+    .teams2 { width: 60%; }
+    .scores2 { width: 40%; }
+    .list-dropdown h2 { font-size: 25px; }
+    .clubs input[type="text"] { width: 92%; }
+    .t1, .t2, .s1, .s2 { font-size: 16px; }
+    .page-title h2 { font-size: 28px; }
+    .logo h5 a img { width: 90px; }
+    .footer-nav li a { font-size: 11px; }
+    .copyright span { font-size: 10px; }
 }
