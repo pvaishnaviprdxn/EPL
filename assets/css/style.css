@@ -112,8 +112,9 @@ header { background-color:rgba(66, 58, 58, .98); }
 header h1 {
     text-align: left;
     padding: 0;
-    display: inline-block;
     margin-right: 25px;
+    display: inline-block;
+    
 }
 
 header h1 a img { width: 100px; }
@@ -125,12 +126,13 @@ nav { display: inline-block; }
     padding: 12px 0;
     margin-right: 36px;
     color: white;
-    font-weight: bold;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .menu li a.home.active,
 .menu li a.club-lists.active,
+.match-det.active,
 .menu li a:hover {
     border-bottom: 2px solid;
     -webkit-border-bottom: 2px solid;
@@ -148,12 +150,12 @@ nav { display: inline-block; }
 .logout {
     text-transform: uppercase;
     padding: 8px 12px;
+    border: 2px solid;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    border: 2px solid;
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -190,9 +192,9 @@ nav { display: inline-block; }
     background-repeat: no-repeat;
 }
 
-h1 { 
+h1 {
+    text-align: center; 
     padding-top: 100px;
-    text-align: center;
 }
 
 h1 a img { width: 200px; }
@@ -230,8 +232,8 @@ h1 a img { width: 200px; }
     display: none;
     position: fixed;
     z-index: 1;  
-    left: 420px;
     top: 20%;
+    left: 420px;
     background-color: rgba(0,0,0,.4);
     color: rgb(255, 254, 254);
 }
@@ -265,8 +267,8 @@ h2 {
     text-transform: capitalize;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 18px;
     font-family: serif;
+    font-size: 18px;
     font-weight: bold;  
 }
 
@@ -313,11 +315,11 @@ input[type="password"] {
 .pass-error1,
 .pass-error2 {
     display: block;
-    opacity: 0;
     color: #ff1e1e;
     font-family: monospace;
     font-size: 13px;
-    font-weight: bold;   
+    font-weight: bold; 
+    opacity: 0;  
 }
 
 .email-error1,
@@ -339,14 +341,14 @@ input[type="password"] {
     -o-border-radius: 2px;
     background-color: rgb(14, 207, 241);
     color: white;
-    font-weight: bold;
     font-family: serif;
+    font-weight: bold;
 }
 
 .submit:hover {
     border: 3px solid;
     border-color:  rgb(255, 254, 254);
-    background:transparent;
+    background: transparent;
     transition: .4s ease-in-out;
     -webkit-transition: .4s ease-in-out;
     -ms-transition: .4s ease-in-out;
@@ -377,8 +379,8 @@ section { text-align: center; }
 
 .slides {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     opacity:1;
     -webkit-transition: 1s ease-in-out;
     -ms-transition: 1s ease-in-out;
@@ -387,7 +389,7 @@ section { text-align: center; }
     transition: 1s ease-in-out; 
 }
 
-.slides.fadeout { opacity:0; }
+.slides.fadeout { opacity: 0; }
 
 .slides h2 {
     padding: 50px 0;
@@ -436,13 +438,13 @@ section { text-align: center; }
 .history-of-league p {
     text-align: center;
     padding: 10px 0;
-    font-size: 20px;
     font-family: serif;
+    font-size: 20px;
 }
 
 .awards-div { 
-    margin-top: 50px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .awards-div h3 { padding-bottom: 0; }
@@ -460,8 +462,8 @@ section { text-align: center; }
 }
 
 .award-content {
-    font-size: 20px;
     font-family: serif;
+    font-size: 20px;
 }
 
 figure { float: right; }
@@ -525,8 +527,8 @@ figure img {
     -o-border-radius: 2px;
     background: #11bcce;
     color: white;
-    font-weight: bold;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .clubList {
@@ -537,12 +539,12 @@ figure img {
     border: 2px solid #5f3061;
     border-radius: 5px;
     margin-bottom: 18px;
+    display: inline-block;
     -webkit-box-shadow: 6px 6px 6px black;
     -ms-box-shadow: 6px 6px 6px black;
     -moz-box-shadow: 6px 6px 6px black;
     -o-box-shadow: 6px 6px 6px black;
     box-shadow: 6px 6px 6px black;
-    display: inline-block;
 }
 
 .detlist { vertical-align: middle; }
@@ -603,8 +605,8 @@ figure img {
     text-align: left;
     color: #ef2251;
     font-family: serif;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .matchdayX {
@@ -626,8 +628,12 @@ figure img {
 .match-details2 li {
     width: 250px;
     padding: 20px;
-    margin: 0 15px 32px 15px;
     border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin: 0 15px 32px 15px;
     display: inline-block;
     background: #f3f9ff;
     -webkit-box-shadow: 0 0 10px black;
@@ -657,14 +663,14 @@ figure img {
 .tm2 {
     text-align: center;
     display: block;
-    font-size: 15px;
     font-family: serif;
+    font-size: 15px;
     font-weight: bold; 
 }
 
 .tm1 { 
-    color: #417916;
     padding-top: 12px;
+    color: #417916;
 }
 
 .tm2 { color: #411679; }
@@ -687,9 +693,9 @@ figcaption {
     text-transform: capitalize;
     text-align: center;
     padding: 16px 0;
-    font-weight: bold;
-    font-family: monospace;
     color: rgb(255, 56, 133);
+    font-family: monospace;
+    font-weight: bold;
 }
 /*match-page style end*/
 
@@ -723,8 +729,8 @@ footer {
 .footer-nav li a {
     text-transform: capitalize;
     color: white;
-    font-weight: bold;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .footer-nav li a:hover { text-decoration: underline; }
@@ -761,16 +767,15 @@ footer {
     text-indent: 0;
     width: 16px;
     padding: 6px 6px;
-    border-radius: 16px;
     border: 2px solid #6967676b;
-    border-color: #a7a0a0; 
+    border-radius: 16px;
     -webkit-border-radius: 16px;
     -ms-border-radius: 16px;
     -moz-border-radius: 16px;
     -o-border-radius: 16px;
     margin-left: 6px;
     float: right;
-    background: #ffffff;
+    background: #fff;
     color: rgb(61, 57, 57);
     font-family: "Fontawesome";
     font-size: 16px;   
@@ -844,8 +849,8 @@ footer {
     .email-error1,
     .email-error2,
     .pass-error1 {
-        font-weight: lighter; 
         font-size:9px;
+        font-weight: lighter; 
     }
 
     .pass-error2 { font-size: 7.56px; }
@@ -877,6 +882,7 @@ footer {
     /*club-list*/
     .clubs input[type="text"] { width: 96%; }
     .clubList { padding: 25px; }
+
     /*match details*/
     .match-details2 li { width: 226px; }
     .teams2 { width: 60%; }
@@ -888,8 +894,8 @@ footer {
 @media only screen and (max-width: 540px) {
     /*login page media-query*/
     .modal { 
-        left: 160px;
         top: 10%;
+        left: 160px;
     }
 
     .login-form { padding: 20px 0; }
@@ -904,11 +910,11 @@ footer {
         top: 0;
         font-size: 12px;
     }
-
+    /*menu style*/
     .hamburger { 
         text-indent: -9999px;
         display: inline-block;
-        color: white;
+        color: rgb(255, 254, 254);
     }
 
     .hamburger::before {
@@ -916,15 +922,15 @@ footer {
         text-indent: 0;
         position: absolute;
         left: 88%;
-        font-size: 24px;
         font-family: "Fontawesome";
+        font-size: 24px;
     }
 
     .menu { display: none; }
 
     .menu li { 
-        display: block;
         text-align: center;
+        display: block;
     }
 
     .menu li a { margin-right: 0; }
@@ -942,9 +948,9 @@ footer {
         background: rgba(66, 58, 58, .98);
         display: block;
         position: absolute;
-        top: 0;
-        left: 70%;
         z-index: 1;
+        top: 0;
+        left: 70%;    
     }
 
     .no-scroll {
@@ -953,15 +959,16 @@ footer {
     }
 
     .logout-active {
+        text-align: center;
         display: block;
         position: absolute;
         z-index: 1;
-        left: 70%;
         top: 130px;
         right: 0;
-        text-align: center;
+        left: 70%;
     }
 
+    /*home-page style*/
     .banner { background-size: 540px 500px; }
     .slides h2 { font-size: 32px; }
 
@@ -983,14 +990,16 @@ footer {
         width: 170px;
         height: 170px;
     }
-
+    /*footer*/
     .logo h5 a img { width: 100px; }
 
+    /*clublist page style*/
     .clubList{
         width: 32%;
         margin-right: 20px;
     } 
 
+    /*match details page style*/
     .match-details2 li { width: 300px; }
     .teams2 { width: 70%; }
     .scores2 { width: 30%; }
@@ -999,16 +1008,19 @@ footer {
 
 /*media query for 320px start*/
 @media only screen and (max-width: 320px) {
+    /*login page style*/
     .login-page { background-size: 320px 418px; }
 
     .modal { 
         width: 175px;
+        margin: 0 auto;
         top: 5%;
         left: 29px;
-        margin: 0 auto;
     }
 
     header h1 a img { width: 75px; }
+    /*menu style*/
+
     .hamburger::before { font-size: 20px; }
 
     .menu-active {
@@ -1018,7 +1030,7 @@ footer {
 
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
-
+     /*homepage page style*/
     .banner {
         height: 148px;
         background-size: contain;
@@ -1037,13 +1049,13 @@ footer {
     .awards-div h3 { font-size: 18px; }
 
     .awards {
-        height: 350px;
         width: 100%;
+        height: 350px;
     }
     
     .award-content {
-        display: block;
         width: 100%;
+        display: block;
     }
 
     .award-content p { font-size: 12px; }
@@ -1057,7 +1069,7 @@ footer {
         width: 140px;
         height: 140px;
     }
-
+    /*club-list page style*/
     .clubList {
         width: 70%;
         margin-right: 0;
@@ -1070,6 +1082,7 @@ footer {
     .clubs input[type="text"] { width: 92%; }
     .t1, .t2, .s1, .s2 { font-size: 16px; }
     .page-title h2 { font-size: 28px; }
+    /*footer*/
     .logo h5 a img { width: 90px; }
     .footer-nav li a { font-size: 11px; }
     .copyright span { font-size: 10px; }
