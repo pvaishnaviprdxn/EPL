@@ -954,11 +954,10 @@ footer {
     .logout-active {
         display: block;
         position: absolute;
-        left: 0;
-        right: 0;
         z-index: 1;
         left: 70%;
         top: 130px;
+        right: 0;
         text-align: center;
     }
 
@@ -975,8 +974,8 @@ footer {
     .award-content { width: 46%; }
 
     .award-content p { 
-        font-size: 15px;
         padding-top: 5px;
+        font-size: 15px;
     }
 
     figure img {
@@ -1012,17 +1011,17 @@ footer {
     .hamburger::before { font-size: 20px; }
 
     .menu-active {
-        left: 60%;
         width: 40%;
+        left: 60%;
     }
 
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
 
     .banner {
-        background-size: contain;
-        background-repeat: no-repeat;
         height: 148px;
+        background-size: contain;
+        background-repeat: no-repeat;  
     }
 
     .logout { font-size: 8px; }
@@ -1037,8 +1036,8 @@ footer {
     .awards-div h3 { font-size: 18px; }
 
     .awards {
-        width: 100%;
         height: 350px;
+        width: 100%;
     }
     
     .award-content {
@@ -1073,6 +1072,5 @@ footer {
     .logo h5 a img { width: 90px; }
     .footer-nav li a { font-size: 11px; }
     .copyright span { font-size: 10px; }
-    
 }
 /*media query for 320px end*/
