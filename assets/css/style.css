@@ -165,9 +165,9 @@ nav { display: inline-block; }
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    background-color:white;
-    color: black;
     border-color: rgb(255, 251, 251);
+    background-color:rgb(255, 254, 254);
+    color: black;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
     -ms-transition: .5s ease-in-out;
@@ -225,9 +225,9 @@ h1 a img { width: 200px; }
 }
 
 .modal {
-    display: none;
     width: 26%; 
     padding:0 50px;
+    display: none;
     position: fixed;
     z-index: 1;  
     left: 420px;
@@ -238,8 +238,8 @@ h1 a img { width: 200px; }
 
 .close-mod {
     text-indent: -9999px;
-    position: relative;
     float: right;
+    position: relative;
 }
 
 .close-mod:before {
@@ -254,9 +254,9 @@ h1 a img { width: 200px; }
 
 .close-mod:hover,
 .close-mod:focus {
-    color: #bbb;
     text-decoration: none;
     cursor: pointer;
+    color: #bbb;
 }
 
 .login-form { padding: 40px 25px; }
@@ -284,12 +284,12 @@ input[type="password"] {
     width: 100%;
     padding: 8px;
     border: 0;
-    margin: 4px 0;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
+    margin: 4px 0;
 }
 
 .username,
