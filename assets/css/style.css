@@ -794,14 +794,22 @@ footer {
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 1024px) {
-    /*login page media-query*/
-    h1 a img { width: 160px; }
-    .login-btn { padding: 4px 15px; }
-    .modal { left: 330px; }
-    h2 { font-size: 15px; }
-    label { font-size: 12px; }
-    .email,
-    .pass { font-size: 12px; }
+   /*login page media-query*/
+   h1 a img { width: 160px; }
+   .login-btn { padding: 4px 15px; }
+   .modal { left: 330px; }
+   h2 { font-size: 15px; }
+   label { font-size: 12px; }
+   
+   .email,
+   .pass { font-size: 12px; }
+    
+   /*club-list page*/
+   .logout-btn { left: 40.5%; }
+   .clubs input[type="text"] { width: 97%; }
+   .clubList { margin-right: 20px; }
+   .teams2 { width: 50%; }
+   .scores2 { width: 40%; }
 }  
 
 @media only screen and (max-width: 995px) {
