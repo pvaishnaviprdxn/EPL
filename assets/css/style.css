@@ -488,6 +488,7 @@ figure img {
 
 .clubs { margin-bottom: 30px; }
 .club-list { background: rgb(255, 252, 248); }
+
 .clubs input[type="text"] {
     padding: 10px;
     border: 1px solid;
