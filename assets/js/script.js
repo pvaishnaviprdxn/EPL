@@ -351,6 +351,7 @@ window.onload = (function(){
     //hamburger function start
     var menu = document.querySelector(".hamburger");
     menu.addEventListener("click",showMenu,false);
+    /*function to display menu */
     function showMenu(e) {
         var ul = document.querySelector(".menu");
         var logout = document.querySelector(".logout-btn");
@@ -358,7 +359,8 @@ window.onload = (function(){
         logout.classList.add("logout-active");
         html.classList.add("no-scroll");
     }
-    document.onclick = function(e) {
+    /*function to hide menu if clicked outside of menu*/
+    document.onclick = (function(e) {
         var ul = document.querySelector(".menu");
         var logout = document.querySelector(".logout-btn");
         if(e.target.className != "hamburger"){
@@ -366,7 +368,7 @@ window.onload = (function(){
             logout.classList.remove("logout-active");
             html.classList.remove("no-scroll");
         }
-    }
+    })
     //hamburger function end
 
 
