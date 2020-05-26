@@ -800,7 +800,7 @@ footer {
    .modal { left: 330px; }
    h2 { font-size: 15px; }
    label { font-size: 12px; }
-   
+
    .email,
    .pass { font-size: 12px; }
     
@@ -813,9 +813,12 @@ footer {
 }  
 
 @media only screen and (max-width: 995px) {
-    /*login page media-query*/
+    /*login page*/
     h1 a img { width: 140px; }
     .login-btn { padding: 3px 13px; }
+    /*match-details page*/
+    .teams2 { width: 50%; }
+    .scores2 { width: 30%; }
 }
 
 @media only screen and (max-width: 768px) {
