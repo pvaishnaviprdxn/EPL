@@ -348,6 +348,17 @@ window.onload = (function(){
     }
     //Match-details page functionality end//
     
+    //hamburger function start
+    var menu = document.querySelector(".hamburger");
+    menu.addEventListener("click",showMenu,false);
+    function showMenu() {
+        var ul = document.querySelector(".menu");
+        var logout = document.querySelector(".logout-btn");
+        ul.classList.add("menu-active");
+        logout.classList.add("logout-active");
+        html.classList.add("no-scroll");
+    }
+    //hamburger function end
 
 
     //logout function start
