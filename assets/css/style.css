@@ -706,9 +706,10 @@ figcaption {
 =================================*/ 
 footer { 
     width: 100%;
-    background-color:rgba(66, 58, 58, .98);
-    bottom: 0;
     position: relative;
+    bottom: 0;
+    background-color:rgba(66, 58, 58, .98);
+    
 }
 
 .logo h5,
@@ -761,6 +762,8 @@ footer {
     width: 16px;
     padding: 6px 6px;
     border-radius: 16px;
+    border: 2px solid #6967676b;
+    border-color: #a7a0a0; 
     -webkit-border-radius: 16px;
     -ms-border-radius: 16px;
     -ms-border-radius: 16px;
@@ -771,20 +774,19 @@ footer {
     color: rgb(61, 57, 57);
     font-family: "Fontawesome";
     font-size: 16px;
-    border: 2px solid #6967676b;
-    border-color: #a7a0a0; 
+    
 }
 
 .copyright {
-    background: rgba(144, 224, 228,.58);
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;  
+    background: rgba(144, 224, 228,.58);
 }
 
 .copyright span {
     text-transform: capitalize;
-    font-size: 12px;
     color: #dedede;
+    font-size: 12px;   
 }
 
 .copyright .up { text-transform: uppercase; }
@@ -794,7 +796,8 @@ footer {
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
+
+/*media query for 1024px starts here*/
 @media only screen and (max-width: 1024px) {
    /*login page media-query*/
    h1 a img { width: 160px; }
@@ -813,7 +816,9 @@ footer {
    .teams2 { width: 50%; }
    .scores2 { width: 40%; }
 }  
+/*media query for 1024px end here*/
 
+/*media query for 995px start here*/
 @media only screen and (max-width: 995px) {
     /*login page*/
     h1 a img { width: 140px; }
@@ -822,7 +827,9 @@ footer {
     .teams2 { width: 50%; }
     .scores2 { width: 30%; }
 }
+/*media query for 1024px end here*/
 
+/*media query for 768px start*/
 @media only screen and (max-width: 768px) {
     /*login page media-query*/
     h1 a img { width: 130px; }
@@ -859,24 +866,26 @@ footer {
         padding-top: 0;
     }
     .award-content p { 
-        font-size: 18px;
         padding-top: 29px;
+        font-size: 18px;
     }
 
     /*club-list*/
     .clubs input[type="text"] { width: 96%; }
     .clubList { padding: 25px; }
-
+    /*match details*/
     .match-details2 li { width: 226px; }
     .teams2 { width: 60%; }
     .scores2 { width: 40%; }
 }
+/*media query for 768px end*/
 
+/*media query for 540px start*/
 @media only screen and (max-width: 540px) {
     /*login page media-query*/
-    .modal { 
+    .modal {
+        top: 10%; 
         left: 160px;
-        top: 10%;
     }
 
     .login-form { padding: 20px 0; }
@@ -891,8 +900,7 @@ footer {
         top: 0;
         font-size: 12px;
     }
-
-
+    /*hambburger/menu style*/
     .hamburger { 
         text-indent: -9999px;
         display: inline-block;
@@ -924,27 +932,29 @@ footer {
         align-items: center;
         width: 30%;
         height: 100vh;
-        background: rgba(66, 58, 58, .98);
         display: block;
         position: absolute;
         top: 0;
         left: 70%;
         z-index: 1;
+        background: rgba(66, 58, 58, .98);  
     }
+
     .no-scroll {
         overflow: hidden;
         scroll-behavior: unset;
     }
+
     .logout-active {
+        text-align: center;
         display: block;
         position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
         left: 70%;
         top: 130px;
-        text-align: center;
+        z-index: 1;
     }
+
+    /*home-page*/
     .banner { background-size: 540px 500px; }
     .slides h2 { font-size: 32px; }
 
@@ -958,8 +968,8 @@ footer {
     .award-content { width: 46%; }
 
     .award-content p { 
-        font-size: 15px;
         padding-top: 5px;
+        font-size: 15px;
     }
 
     figure img {
@@ -967,27 +977,31 @@ footer {
         height: 170px;
     }
 
-    .logo h5 a img { width: 100px; }
-
     .clubList{
         width: 32%;
         margin-right: 20px;
     } 
-
+    /*match-details*/
     .match-details2 li { width: 300px; }
     .teams2 { width: 70%; }
     .scores2 { width: 30%; }
+    /*footer*/
+    .logo h5 a img { width: 100px; }
 }
+/*media query for 540px end*/
+
+/*media query for 320px start*/
 @media only screen and (max-width: 320px) {
+    /*login-page*/
     .login-page { background-size: 320px 418px; }
 
     .modal { 
         width: 175px;
+        margin: 0 auto;
         top: 5%;
         left: 29px;
-        margin: 0 auto;
     }
-
+    /*home-page*/
     header h1 a img { width: 75px; }
     .hamburger::before { font-size: 20px; }
 
@@ -1000,9 +1014,10 @@ footer {
     .logout-active { left: 60%; }
 
     .banner {
+        height: 148px;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 148px;
+        
     }
 
     .logout { font-size: 8px; }
@@ -1022,8 +1037,8 @@ footer {
     }
     
     .award-content {
-        display: block;
         width: 100%;
+        display: block;
     }
 
     .award-content p { font-size: 12px; }
@@ -1037,12 +1052,12 @@ footer {
         width: 140px;
         height: 140px;
     }
-
+    /*club-list*/
     .clubList {
         width: 70%;
         margin-right: 0;
     }
-
+    /*match-details*/
     .match-details2 li { width: 190px; }
     .teams2 { width: 60%; }
     .scores2 { width: 40%; }
@@ -1050,7 +1065,9 @@ footer {
     .clubs input[type="text"] { width: 92%; }
     .t1, .t2, .s1, .s2 { font-size: 16px; }
     .page-title h2 { font-size: 28px; }
+    /*footer*/
     .logo h5 a img { width: 90px; }
     .footer-nav li a { font-size: 11px; }
     .copyright span { font-size: 10px; }
 }
+/*media query for 320px end*/
