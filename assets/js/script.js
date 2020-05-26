@@ -2,22 +2,20 @@
 
 */
 'use strict'
-window.onload = (function(){
+window.onload = (function(){ 
     window.history.forward();
     function blockBack() {
         window.history.forward();
     }
-
     //selecting DOM
+    var html=this.document.querySelector("html");
     var main=this.document.querySelector("main");
-    
     //index-page/login-page functionality starts here
     var loginPage = document.querySelector(".container");
     var login = document.querySelector(".login-btn");
     var modal = document.getElementById("form-modal");
     var closeMod = document.getElementById("close");
-
-    if(loginPage.classList.contains("log-page")) {
+    if(loginPage.classList.contains("log-page")) { 
 
         //function to open form modal
         function openModal() {
@@ -31,7 +29,7 @@ window.onload = (function(){
         }
         login.addEventListener("click",openModal,false);
         closeMod.addEventListener("click",closeModal,false);
-        
+       
         //form validation
         var lemail=document.getElementById("email-id");
         var lpassword=document.getElementById("user-pass");
@@ -43,7 +41,7 @@ window.onload = (function(){
             var emailp=/^([0-9a-zA-Z\_\.\-]+)@([0-9a-zA-Z\_\.\-]+)\.([a-zA-Z]+)$/;
             var emailEr1 = document.querySelector(".email-error1");
             var emailEr2 = document.querySelector(".email-error2");
-            if(email == ""){
+            if(email == "") {
                 emailEr1.classList.add("error");
                 validEmail=false;
             }
@@ -63,11 +61,11 @@ window.onload = (function(){
             var passwordp=/((?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-zA-Z])){4,15}/;
             var passEr1 = document.querySelector(".pass-error1");
             var passEr2 = document.querySelector(".pass-error2");
-            if(password == ""){
+            if( password == "" ){
                 passEr1.classList.add("error");
                 validPass=false;
             }
-            else if(!password.match(passwordp)){
+            else if( !password.match(passwordp) ){
                 passEr2.classList.add("error");
                 validPass=false;
             }
@@ -77,40 +75,33 @@ window.onload = (function(){
                 validPass="true";
             }
         },false);
+        //login credentials to be stored in localstorage
+        var creds = [
+            { uemail:"vaishnavi@gmail.com", upassword:"vaishnavi@62" },
+            { uemail:"george@gmail.com", upassword:"george@73" },
+            { uemail:"prdxn@gmail.com", upassword:"prdxn@84" }
+        ];
+        //storing data in localStorage
+        function dataStorage() {
+            var storing = JSON.stringify(creds);
+            localStorage.setItem("User-name", storing);
+        }
+        dataStorage();
 
         var logbtn = document.getElementById("save-login");
         logbtn.addEventListener("click",loggedIn);
 
-        //login credentials to be stored in localstorage
-        var creds = [
-            { uemail:"vaishnavi@gmail.com", upassword:"vaishnavi@62" },
-            { uemail:"george@gmail.com", upassword:"george@73 " },
-            { uemail:"prdxn@gmail.com", upassword:"prdxn@84"}
-        ];
-        //function to login
-        function loggedIn(e) {
-            e.preventDefault();
-            var i;
-            for(i=0; i < creds.length; i++){
-                if(lemail.value === creds[i].uemail && lpassword.value === creds[i].upassword){
-                    dataStorage();
-                    resetForm();
+        function loggedIn() {
+            var inputuser=JSON.parse(localStorage.getItem("User-name"));
+            for(var i=0; i < inputuser.length; i++){
+                if(lemail.value === inputuser[i].uemail && lpassword.value === inputuser[i].upassword){
+                    localStorage.setItem("loggedUser",lemail.value);
+                    window.location.assign("home-page.html");
                 }
             }
         }
-
-        //storing data in localStorage
-        function dataStorage(){
-            var storing = JSON.stringify(creds);
-            var userAccess = "users" + localStorage.length;
-            localStorage.setItem(userAccess,storing);
-            window.location.assign("home-page.html");
-        }
-        //form reset
-        function resetForm() {
-            document.querySelector(".login-form").reset();
-        }
     }
+
 
     //Getting Json data
     if(main.classList.contains("club-list")){
