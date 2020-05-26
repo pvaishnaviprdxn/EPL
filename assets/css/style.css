@@ -358,27 +358,35 @@ input[type="text"]:focus,
 input[type="password"]:focus { outline: transparent; }
 /*index-page style end*/
 /*home-page style start*/
+section { text-align: center; }
 .banner {
     width: 100%;
     height: 500px;
+    position: relative;
     background-image:  linear-gradient(to bottom, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
+    url(../images/banner1.jpg);
+    background-image: -webkit-linear-gradient(to bottom right,rgba(26, 24, 24, 0.52),rgba(121, 54, 102, 0.73),url(../images/banner1.jpg));
+    background-image:  -o-linear-gradient(top, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
     url(../images/banner1.jpg);
     background-size: cover;
 
 }
 
-.tag-line {
-    padding: 62px;
-    margin: 0 auto;
-    text-align: center;
+.tag-line { padding: 62px; }
+.slider { margin: 0 auto; }
+.slides {
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity:1;
+    -webkit-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; 
 }
 
-.tag-line li { display: none; }
-
-.slider {
-    position: relative;
-    margin: auto;
-}
+.slides.fadeout { opacity:0; }
 
 .slides h2 {
     font-size: 67px;
@@ -386,16 +394,20 @@ input[type="password"]:focus { outline: transparent; }
     padding: 50px 0;
 }
 
+
 .about-league { margin: 50px 0; }
 
 .about-league h3,
-.history-of-league h3 {
+.history-of-league h3,
+.awards-div h3 {
     text-transform: capitalize;
     text-align: center;
     padding-bottom: 25px;
-    display: block;
-    background:  linear-gradient(to right,rgb(250, 3, 98),rgb(56, 56, 56));
-    background-clip: text;
+    display: inline-block;
+    background: -webkit-linear-gradient(left top, right top,from(rgb(192, 3, 250)),to(rgb(56, 56, 56)));
+    background:  -o-linear-gradient(left,rgb(192, 3, 250),rgb(56, 56, 56));
+    background:  -moz-linear-gradient(left,rgb(192, 3, 250),rgb(56, 56, 56));
+    background:  linear-gradient(to right,rgb(192, 3, 250),rgb(56, 56, 56));
     -webkit-background-clip: text;
     -ms-background-clip: text;
     -moz-background-clip: text;
@@ -428,14 +440,12 @@ input[type="password"]:focus { outline: transparent; }
     font-size: 20px;
 }
 
-.awards-div { margin-top: 50px; }
-
-.awards-div h3 { 
-    display: inline-block;
-    text-transform: capitalize;
-    font-size: 40px;
-    font-family: serif;
+.awards-div { 
+    margin-top: 50px;
+    text-align: center;
 }
+
+.awards-div h3 { padding-bottom: 0; }
 
 .awards { 
   width: 100%;
