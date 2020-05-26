@@ -394,7 +394,6 @@ section { text-align: center; }
     padding: 50px 0;
 }
 
-
 .about-league { margin: 50px 0; }
 
 .about-league h3,
@@ -465,6 +464,7 @@ section { text-align: center; }
 }
 
 figure { float: right; }
+
 figure img { 
     width: 200px;
     height: 200px;
@@ -474,7 +474,8 @@ figure img {
 /*home-page style end*/
 /*club list style start*/
 .list-dropdown { 
-    margin: 45px 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
     height: 100%;
 }
 
@@ -484,7 +485,7 @@ figure img {
     word-spacing: 5px;
 }
 
-.clubs { margin-bottom: 80px; }
+.clubs { margin-bottom: 30px; }
 
 .clubs input[type="text"] {
     padding: 10px;
@@ -492,17 +493,33 @@ figure img {
     font-size: 18px;
 }
 
+.clubs ::-webkit-input-placeholder { font-size: 14px; }
+.clubs ::-moz-placeholder { font-size: 14px; }
+.clubs :-ms-input-placeholder { font-size: 14px; }
+.clubs ::-o-input-placeholder { font-size: 14px; }
 .clubs ::placeholder { font-size: 14px; }
 .load-more { display: none; }
 .mainList { text-align: center; }
 .club-results { margin-bottom: 50px; }
+
+.club-results h3 {
+    text-align: left;
+    padding-bottom: 34px;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+}
 .results { text-align: center; }
 
 .results button {
     text-transform: capitalize;
     padding: 6px 12px;
-    border: 2px solid #12c7db;
+    border: 2px solid #11bcce;
     border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
     font-weight: bold;
     font-size: 14px;
     background: #11bcce;
@@ -516,11 +533,17 @@ figure img {
     padding: 10px;
     border: 2px solid #5f3061;
     border-radius: 5px;
+    -webkit-box-shadow: 6px 6px 6px black;
+    -ms-box-shadow: 6px 6px 6px black;
+    -moz-box-shadow: 6px 6px 6px black;
+    -o-box-shadow: 6px 6px 6px black;
+    box-shadow: 6px 6px 6px black;
     display: inline-block;
     margin-bottom: 18px;
 }
 
 .detlist { vertical-align: middle; }
+
 .dates {
     display: block;
     text-align: center;
@@ -533,20 +556,16 @@ figure img {
     color: black;
     font-size: 14px;
 }
+.teams { margin-top: 10px; }
 
 .teams,
-.score { 
-    text-align: center;
-    margin-top: 10px;
-}
+.score { text-align: center; }
 
 .t1,
 .t2 {
-    float: left;
     color: rgb(27, 26, 26);
     text-transform: capitalize;
     color: rgb(5, 142, 255);
-    
 }
 
 .t1,
