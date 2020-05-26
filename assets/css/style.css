@@ -675,6 +675,9 @@ figure img {
 
 .tm2 { color: #411679; }
 
+.tm1:hover,
+.tm2:hover { color: rgb(12, 12, 12); }
+
 .sm1,
 .sm2 {     
     text-align: center;
