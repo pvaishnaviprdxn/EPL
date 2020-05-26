@@ -359,6 +359,7 @@ input[type="password"]:focus { outline: transparent; }
 /*index-page style end*/
 /*home-page style start*/
 section { text-align: center; }
+
 .banner {
     width: 100%;
     height: 500px;
@@ -369,11 +370,11 @@ section { text-align: center; }
     background-image:  -o-linear-gradient(top, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
     url(../images/banner1.jpg);
     background-size: cover;
-
 }
 
 .tag-line { padding: 62px; }
 .slider { margin: 0 auto; }
+
 .slides {
     position: absolute;
     left: 0;
@@ -470,9 +471,9 @@ figure img {
     height: 200px;
     border-radius: 100%;
 }
-
 /*home-page style end*/
 /*club list style start*/
+
 .list-dropdown { 
     margin-top: 50px;
     margin-bottom: 20px;
@@ -509,6 +510,7 @@ figure img {
     font-size: 20px;
     font-weight: bold;
 }
+
 .results { text-align: center; }
 
 .results button {
