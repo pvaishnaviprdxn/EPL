@@ -115,10 +115,10 @@ window.onload = (function(){
 
     //home-page functionality start here 
     function homePage() {
+        blockBack();
         if(localStorage.getItem("loggedUser") == null){
             window.location.assign("index.html");
         }
-        blockBack();
         var slidei;
         slidei = 0;
         slideShowing();
