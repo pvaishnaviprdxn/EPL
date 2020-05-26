@@ -839,6 +839,35 @@ footer {
     }
 
     .pass-error2 { font-size: 7.56px; }
+
+    /*home-page*/
+    .banner { background-size: 768px 500px; }
+    .slides h2 { font-size: 42px; }
+
+    .about-league p,
+    .history-of-league p { font-size: 18px; }
+
+    .about-league h3, 
+    .history-of-league h3, 
+    .awards-div h3 { font-size: 35px; }
+    .awards { margin-top:30px; }
+
+    .award-content { 
+        width: 54%;
+        padding-top: 0;
+    }
+    .award-content p { 
+        font-size: 18px;
+        padding-top: 29px;
+    }
+
+    /*club-list*/
+    .clubs input[type="text"] { width: 96%; }
+    .clubList { padding: 25px; }
+
+    .match-details2 li { width: 226px; }
+    .teams2 { width: 60%; }
+    .scores2 { width: 40%; }
 }
 
 @media only screen and (max-width: 540px) {
