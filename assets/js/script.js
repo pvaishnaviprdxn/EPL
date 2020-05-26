@@ -141,6 +141,9 @@ window.onload = (function(){
     //club-list functionality
 
     function searchClubs() {
+        if(localStorage.getItem("loggedUser") == null){
+            window.location.assign("index.html");
+        }
         var clublist;
         var clubDetails;
         //Team names
@@ -255,6 +258,9 @@ window.onload = (function(){
 
     //Match-details page functionality start//
     function matchesDetails() {
+        if(localStorage.getItem("loggedUser") == null){
+            window.location.assign("index.html");
+        }
         function matchday() {
             var y = new XMLHttpRequest();
             y.open("GET","https://raw.githubusercontent.com/openfootball/football.json/master/2019-20/en.1.json",true);
