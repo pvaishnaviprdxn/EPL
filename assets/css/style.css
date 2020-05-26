@@ -886,9 +886,9 @@ footer {
 /*media query for 540px start*/
 @media only screen and (max-width: 540px) {
     /*login page media-query*/
-    .modal {
-        top: 10%; 
+    .modal { 
         left: 160px;
+        top: 10%;
     }
 
     .login-form { padding: 20px 0; }
@@ -903,7 +903,7 @@ footer {
         top: 0;
         font-size: 12px;
     }
-    /*hambburger/menu style*/
+
     .hamburger { 
         text-indent: -9999px;
         display: inline-block;
@@ -925,6 +925,7 @@ footer {
         display: block;
         text-align: center;
     }
+
     .menu li a { margin-right: 0; }
     .logout-btn { display: none; }
 
@@ -937,12 +938,12 @@ footer {
         align-items: center;
         width: 30%;
         height: 100vh;
+        background: rgba(66, 58, 58, .98);
         display: block;
         position: absolute;
         top: 0;
         left: 70%;
         z-index: 1;
-        background: rgba(66, 58, 58, .98);  
     }
 
     .no-scroll {
@@ -951,15 +952,15 @@ footer {
     }
 
     .logout-active {
-        text-align: center;
         display: block;
         position: absolute;
+        z-index: 1;
         left: 70%;
         top: 130px;
-        z-index: 1;
+        right: 0;
+        text-align: center;
     }
 
-    /*home-page*/
     .banner { background-size: 540px 500px; }
     .slides h2 { font-size: 32px; }
 
@@ -982,34 +983,33 @@ footer {
         height: 170px;
     }
 
+    .logo h5 a img { width: 100px; }
+
     .clubList{
         width: 32%;
         margin-right: 20px;
     } 
-    /*match-details*/
+
     .match-details2 li { width: 300px; }
     .teams2 { width: 70%; }
     .scores2 { width: 30%; }
-    /*footer*/
-    .logo h5 a img { width: 100px; }
 }
 /*media query for 540px end*/
 
 /*media query for 320px start*/
 @media only screen and (max-width: 320px) {
-    /*login-page*/
     .login-page { background-size: 320px 418px; }
 
     .modal { 
         width: 175px;
-        margin: 0 auto;
         top: 5%;
         left: 29px;
+        margin: 0 auto;
     }
-    /*home-page*/
+
     header h1 a img { width: 75px; }
     .hamburger::before { font-size: 20px; }
-    
+
     .menu-active {
         width: 40%;
         left: 60%;
@@ -1017,12 +1017,11 @@ footer {
 
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
-    
+
     .banner {
         height: 148px;
         background-size: contain;
-        background-repeat: no-repeat;
-        
+        background-repeat: no-repeat;  
     }
 
     .logout { font-size: 8px; }
@@ -1037,13 +1036,13 @@ footer {
     .awards-div h3 { font-size: 18px; }
 
     .awards {
-        width: 100%;
         height: 350px;
+        width: 100%;
     }
     
     .award-content {
-        width: 100%;
         display: block;
+        width: 100%;
     }
 
     .award-content p { font-size: 12px; }
@@ -1057,12 +1056,12 @@ footer {
         width: 140px;
         height: 140px;
     }
-    /*club-list*/
+
     .clubList {
         width: 70%;
         margin-right: 0;
     }
-    /*match-details*/
+
     .match-details2 li { width: 190px; }
     .teams2 { width: 60%; }
     .scores2 { width: 40%; }
@@ -1070,7 +1069,6 @@ footer {
     .clubs input[type="text"] { width: 92%; }
     .t1, .t2, .s1, .s2 { font-size: 16px; }
     .page-title h2 { font-size: 28px; }
-    /*footer*/
     .logo h5 a img { width: 90px; }
     .footer-nav li a { font-size: 11px; }
     .copyright span { font-size: 10px; }
