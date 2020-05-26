@@ -1009,17 +1009,12 @@ footer {
     /*home-page*/
     header h1 a img { width: 75px; }
     .hamburger::before { font-size: 20px; }
-
-    .menu-active {
-        left: 60%;
-        width: 40%;
-    }
-
-    .menu-active {
-        width: 40%;
-        left: 60%;
-    }
     
+    .menu-active {
+        width: 40%;
+        left: 60%;
+    }
+
     .menu li a { font-size: 12px; }
     .logout-active { left: 60%; }
     
