@@ -283,13 +283,13 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 8px;
+    border: 0;
+    margin: 4px 0;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -ms-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    border: 0;
-    margin: 4px 0;
 }
 
 .username,
@@ -312,12 +312,12 @@ input[type="password"] {
 .email-error2,
 .pass-error1,
 .pass-error2 {
-    opacity: 0;
-    font-size: 13px;
-    color: #ff1e1e;
-    font-weight: bold;
     display: block;
+    opacity: 0;
+    color: #ff1e1e;
     font-family: monospace;
+    font-size: 13px;
+    font-weight: bold;   
 }
 
 .email-error1,
@@ -344,9 +344,9 @@ input[type="password"] {
 }
 
 .submit:hover {
-    background:transparent;
     border: 3px solid;
     border-color:  rgb(255, 254, 254);
+    background:transparent;
     transition: .4s ease-in-out;
     -webkit-transition: .4s ease-in-out;
     -ms-transition: .4s ease-in-out;
@@ -367,7 +367,7 @@ section { text-align: center; }
     background-image:  linear-gradient(to bottom, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
     url(../images/banner1.jpg);
     background-image: -webkit-linear-gradient(to bottom right,rgba(26, 24, 24, 0.52),rgba(121, 54, 102, 0.73),url(../images/banner1.jpg));
-    background-image:  -o-linear-gradient(top, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
+    background-image:  -o-linear-gradient(to top, rgba(26, 24, 24, 0.52), rgba(121, 54, 102, 0.73)),
     url(../images/banner1.jpg);
     background-size: cover;
 }
@@ -390,9 +390,9 @@ section { text-align: center; }
 .slides.fadeout { opacity:0; }
 
 .slides h2 {
+    padding: 50px 0;
     font-size: 67px;
     color: white;
-    padding: 50px 0;
 }
 
 .about-league { margin: 50px 0; }
@@ -475,15 +475,15 @@ figure img {
 /*club list style start*/
 
 .list-dropdown { 
+    height: 100%;
     margin-top: 50px;
     margin-bottom: 20px;
-    height: 100%;
 }
 
 .list-dropdown h2{ 
     text-align: left;
-    font-size: 30px;
     word-spacing: 5px;
+    font-size: 30px;
 }
 
 .clubs { margin-bottom: 30px; }
@@ -531,24 +531,24 @@ figure img {
 .clubList {
     width: 182px;
     height: 80px;
-    margin-right: 10px;
     padding: 10px;
+    margin-right: 10px;
     border: 2px solid #5f3061;
     border-radius: 5px;
+    margin-bottom: 18px;
     -webkit-box-shadow: 6px 6px 6px black;
     -ms-box-shadow: 6px 6px 6px black;
     -moz-box-shadow: 6px 6px 6px black;
     -o-box-shadow: 6px 6px 6px black;
     box-shadow: 6px 6px 6px black;
     display: inline-block;
-    margin-bottom: 18px;
 }
 
 .detlist { vertical-align: middle; }
 
 .dates {
-    display: block;
     text-align: center;
+    display: block;
     font-weight: bold;
     color: rgb(1, 128, 128);
 }
@@ -565,25 +565,24 @@ figure img {
 
 .t1,
 .t2 {
-    color: rgb(27, 26, 26);
     text-transform: capitalize;
-    color: rgb(5, 142, 255);
+    color: rgb(99, 0, 156);
 }
 
 .t1,
 .t2,
 .s1,
 .s2 {
-    display: inline-block;
     text-align: left;
+    display: inline-block;
     font-family: serif;
     font-size: 14px;  
 }
 
 .s1,
 .s2 {
-    color: rgb(235, 0, 0);
     float: right;
+    color: rgb(235, 0, 0);
 }
 /*club list style end*/
 
@@ -624,18 +623,17 @@ figure img {
 }
 
 .match-details2 li {
-    display: inline-block;
     width: 250px;
     padding: 20px;
     margin: 0 15px 32px 15px;
     border-radius: 3px;
+    display: inline-block;
     background: #f3f9ff;
     -webkit-box-shadow: 0 0 10px black;
     -ms-box-shadow: 0 0 10px black;
     -moz-box-shadow: 0 0 10px black;
     -o-box-shadow: 0 0 10px black;
     box-shadow: 0 0 10px black;
-
 }
 
 .match-date { 
@@ -645,21 +643,21 @@ figure img {
 
 .teams2 { 
     width: 65%;
-    display: inline-block;
     padding: 12px 0;
+    display: inline-block;
 }
 
 .tname {
-    display: block;
     text-align: center;
+    display: block;
 }
 
 .tm1,.tm2 {
+    text-align: center;
     display: block;
     font-size: 15px;
     font-family: serif;
-    font-weight: bold;
-    text-align: center;
+    font-weight: bold; 
 }
 
 .tm1 { 
@@ -671,16 +669,16 @@ figure img {
 
 .sm1,
 .sm2 {     
-    display: block;
     text-align: center;
+    display: block;
 }
 
 .sm1 { padding-top: 12px; }
 
 .scores2 {
     width: 35%;
-    float: right;
     padding: 12px 0;
+    float: right;
 }
 
 figcaption { 
@@ -773,8 +771,7 @@ footer {
     background: #ffffff;
     color: rgb(61, 57, 57);
     font-family: "Fontawesome";
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
 
 .copyright {
@@ -859,6 +856,7 @@ footer {
     .about-league h3, 
     .history-of-league h3, 
     .awards-div h3 { font-size: 35px; }
+
     .awards { margin-top:30px; }
 
     .award-content { 
@@ -917,12 +915,14 @@ footer {
     }
 
     .menu { display: none; }
+
     .menu li { 
         display: block;
         text-align: center;
     }
     .menu li a { margin-right: 0; }
     .logout-btn { display: none; }
+
     .menu-active {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
