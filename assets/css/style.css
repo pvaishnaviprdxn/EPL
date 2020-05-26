@@ -704,7 +704,9 @@ figcaption {
 =================================*/ 
 footer { 
     width: 100%;
-    background-color: #423a3afc;
+    background-color:rgba(66, 58, 58, .98);
+    bottom: 0;
+    position: relative;
 }
 
 .logo h5,
@@ -712,7 +714,7 @@ footer {
 .social-links { text-align: center; }
 
 .logo h5 a img { width: 120px; }
-.footer-nav { margin: 10px 0; }
+.footer-nav { margin-top: 10px; }
 .footer-nav li { margin: 0 15px; }
 
 .footer-nav li a {
@@ -723,8 +725,8 @@ footer {
 }
 
 .footer-nav li a:hover { text-decoration: underline; }
-.social-links { padding: 10px 0; }
-
+.social-links { padding: 20px 0; }
+.social-links li { display: inline-table; }
 .twitter,
 .facebook,
 .instagram,
@@ -734,44 +736,45 @@ footer {
     position: relative;
 }
 
-.twitter:before { content: "\f099"; }
-.facebook:before { content: "\f09a"; }
-.instagram:before { content: "\f16d"; }
-.snapchat:before {
+.twitter:after { content: "\f099"; }
+.facebook:after { content: "\f09a"; }
+.instagram:after { content: "\f16d"; }
+
+.snapchat:after {
      content: "\f2ac";
      border: 1px solid;
 }
 
-.twitter:hover:before { color:rgb(29,161,242); }
-.facebook:hover:before { color:rgb(16, 134, 245); }
-.instagram:hover:before { color:rgb(231, 42, 152); }
-.snapchat:hover:before { color:rgb(255, 230, 5); }
+.twitter:hover:after { color:rgb(29,161,242); }
+.facebook:hover:after { color:rgb(16, 134, 245); }
+.instagram:hover:after { color:rgb(231, 42, 152); }
+.snapchat:hover:after { color:rgb(255, 230, 5); }
 
-.twitter:before,
-.facebook:before,
-.instagram:before,
-.snapchat:before {
+.twitter:after,
+.facebook:after,
+.instagram:after,
+.snapchat:after {
     text-align: center;
     text-indent: 0;
-    width: 15px;
-    padding: 5px 6px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    width: 16px;
+    padding: 6px 6px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
     margin-right: 16px;
     float: right;
     background: #ffffff;
     color: rgb(61, 57, 57);
     font-family: "Fontawesome";
     font-size: 16px;
-    border: 3px solid #6967676b;
+    border: 2px solid #6967676b;
     border-color: #a7a0a0; 
 }
 
 .copyright {
-    background: #90e0e494;
+    background: rgba(144, 224, 228,.58);
     padding: 10px 0;
     text-align: center;
 }
